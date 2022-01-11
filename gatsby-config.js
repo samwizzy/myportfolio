@@ -2,20 +2,23 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "greatsam",
+    author: "@samwize.inc",
   },
   plugins: [
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "",
-        spaceId: "",
+        accessToken: "L50iTTVIb9uBhJLZejBONGfkrsCmg4IoeGWpzGTmFNQ",
+        spaceId: "byel0fvyzzmf",
       },
     },
+    "gatsby-plugin-postcss",
     "gatsby-plugin-emotion",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
+        trackingId: "UA-216124407-3",
       },
     },
     "gatsby-plugin-image",
@@ -45,6 +48,21 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+              },
+            ],
+          },
+        },
+      },
     },
   ],
 };
