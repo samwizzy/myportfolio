@@ -11,8 +11,6 @@ import { graphql } from "gatsby";
 function Articles({ data }) {
   const articles = data.articles.nodes;
 
-  console.log(articles, "articles");
-
   return (
     <Layout>
       <title>Article Page</title>
@@ -20,7 +18,7 @@ function Articles({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-3xl font-bold text-gray-400 mb-4">Article</h1>
 
-        <div className="grid grid-cols-12 gap-x-8 gap-y-8">
+        <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
           {articles.map((article) => (
             <Card
               key={article.id}

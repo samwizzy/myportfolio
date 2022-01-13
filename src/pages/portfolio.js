@@ -20,8 +20,6 @@ function Portfolio({ data }) {
     }
   }, [data]);
 
-  console.log(data, "portfolio data");
-
   return (
     <Layout>
       <title>Portfolio Page</title>
@@ -29,7 +27,7 @@ function Portfolio({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-3xl font-bold text-gray-400 mb-4">Portfolio</h1>
 
-        <div className="grid grid-cols-12 gap-x-8 gap-y-8">
+        <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
           {projects.map((project) => (
             <Card
               key={project.id}
@@ -39,7 +37,11 @@ function Portfolio({ data }) {
               <CardMedia
                 component="img"
                 height="140"
-                sx={{ maxHeight: 400, objectPosition: "50% 0%" }}
+                sx={{
+                  maxWidth: "100%",
+                  maxHeight: 400,
+                  objectPosition: "50% 0%",
+                }}
                 src={
                   project.displayImage
                     ? project.displayImage.file.url

@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
             😎
           </span>
         </p>
-        <ul className="align-middle">
+        <ul className="mt-8">
           <li className="mb-8">
             <h2 className="text-purple-500 text-3xl font-black">
               {docLink.text}
@@ -88,7 +88,9 @@ const IndexPage = ({ data }) => {
                   style={{ textAlign: link.dir }}
                 >
                   {link.text}
+                  <hr className="h-1 w-40 border-0 border-b-2 border-purple-500" />
                 </h3>
+
                 <p className="text-gray-400 leading-8 text-sm font-medium space-x-4">
                   {link.lists &&
                     link.lists.map((name) => (
