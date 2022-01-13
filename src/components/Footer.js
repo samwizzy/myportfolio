@@ -216,7 +216,7 @@ function Footer() {
             </h1>
           </div>
           <div className="text-gray-500">
-            <p>Copyright © 2021 Mollie B.V. All rights reserved.</p>
+            <p>Copyright © 2021 Snr. Software dev. All rights reserved.</p>
             <p>Lagos Island, Nigeria</p>
           </div>
         </div>
