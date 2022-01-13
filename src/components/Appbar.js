@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "gatsby";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiOutlineBell, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { classNames } from "../utils/helpers";
 
 const navigation = [
   { name: "About Me", href: "/", current: true },
@@ -10,9 +11,9 @@ const navigation = [
   { name: "Tools", href: "/tools", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 export default function Appbar() {
   return (

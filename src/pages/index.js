@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
+import { classNames } from "../utils/helpers";
 
 const docLink = {
   text: "Biography",
@@ -84,11 +85,13 @@ const IndexPage = ({ data }) => {
             <li key={link.text} className="pb-8">
               <div>
                 <h3
-                  className="text-purple-500 text-2xl font-bold uppercase mb-8"
+                  className={classNames(
+                    "text-purple-500 text-2xl font-bold uppercase mb-8",
+                    link.dir === "center" && "partial-line"
+                  )}
                   style={{ textAlign: link.dir }}
                 >
                   {link.text}
-                  <hr className="h-1 w-40 border-0 border-b-2 border-purple-500" />
                 </h3>
 
                 <p className="text-gray-400 leading-8 text-sm font-medium space-x-4">

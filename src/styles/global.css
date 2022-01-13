@@ -8,6 +8,25 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+h3.partial-line {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+h3.partial-line::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 1.5em;
+  width: calc(100% - 80px);
+  height: 2px;
+  background: none repeat scroll 0 0 #7e22ce;
+}
+
 .active {
   @apply bg-purple-900 text-white hover:bg-purple-900 !important;
 }
