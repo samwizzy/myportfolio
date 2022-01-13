@@ -21,7 +21,7 @@ const links = [
     dir: "center",
   },
   {
-    text: "Where I see myself in 5 years",
+    text: "In 5 years",
     description:
       "In five years from now, I should be at the top of my career, building well-known and renowned applications that will become an household name. At this time, I would achieve quite a handful of my vision which is to be a pioneer to the next big thing. In the past years, I have worked companies where I had a platform to explore, collaborate and grow to where I am now. If I am working with you then I am adding great values to the growth of the company. I want to gain experience that moves through the development processes to the administrative channels, as this could set me up for a strategic and pivotal role in the company.",
     dir: "center",
