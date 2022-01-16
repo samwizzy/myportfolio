@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
                     ))}
                 </p>
                 <p
-                  className="text-gray-400 leading-8 text-base font-medium"
+                  className="text-gray-400 leading-8 text-base font-normal"
                   style={{ textAlign: link.dir }}
                 >
                   {link.description}
