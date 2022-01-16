@@ -42,6 +42,7 @@ function Tools({ data }) {
           spaceBetween={50}
           slidesPerView={3}
           breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 20 },
             480: { slidesPerView: 1, spaceBetween: 20 },
             640: { slidesPerView: 3, spaceBetween: 40 },
           }}
