@@ -18,7 +18,8 @@ function Footer() {
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4 font-medium">
           <div className="sm:col-span-3 col-span-12">
             <div className="flex items-center space-x-2 text-gray-300 uppercase font-black sm:mb-4 mb-2">
-              <div className="logo" /> <span> About Me</span>
+              <div className="logo" />{" "}
+              <span className="lg:inline-flex hidden"> About Me</span>
             </div>
             <div className="text-sm text-gray-400 leading-5">
               <p className="text-justify">

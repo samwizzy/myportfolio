@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
@@ -12,22 +12,27 @@ const IndexPage = ({ data }) => {
       <title>About Me Page</title>
 
       <div className="w-full h-96 bg-purple-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
-            <div className="sm:col-span-6 col-span-12">
+            <div className="sm:col-span-6 col-span-12 sm:pt-32 pt-12">
               <h1 className="text-xl font-mono text-purple-200 ml-1">I am</h1>
               <h1 className="text-7xl font-thin text-purple-200">
                 Samuel <span className="font-black">Okeke</span>
               </h1>
-              <h1 className="text-xl font-thin text-purple-200 mb-8">
+              <h1 className="text-xl font-thin text-purple-200 mb-2">
                 — Software Developer
               </h1>
+              <p className="text-sm italic font-mono mb-8">
+                Works easy to work smart, apply logic and reapply precedence.
+              </p>
               <Stack direction="row" spacing="16px" marginY="16px">
                 <Button
                   variant="contained"
                   color="primary"
                   size="large"
                   className="rounded-xl"
+                  component={Link}
+                  to="/tools"
                 >
                   Tools
                 </Button>
@@ -36,12 +41,14 @@ const IndexPage = ({ data }) => {
                   color="primary"
                   size="large"
                   className="rounded-xl"
+                  component={Link}
+                  to="/portfolio"
                 >
                   Portfolio
                 </Button>
               </Stack>
             </div>
-            <div className="sm:col-span-6 col-span-12 sm:block hidden">
+            <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block hidden">
               <img src="anime.svg" alt="anime" />
             </div>
           </div>
@@ -80,8 +87,8 @@ const IndexPage = ({ data }) => {
               <div>
                 <h3
                   className={classNames(
-                    "text-purple-500 text-2xl font-bold uppercase mb-8",
-                    link.dir === "center" && "partial-line"
+                    "text-purple-500 text-2xl font-bold uppercase mb-3",
+                    link.underline && "partial-line"
                   )}
                   style={{ textAlign: link.dir }}
                 >

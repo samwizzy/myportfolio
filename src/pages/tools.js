@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
+import { HiOutlineStar } from "react-icons/hi";
 import { Navigation, Pagination, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,8 +16,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { graphql } from "gatsby";
 
-function Tools() {
+function Tools({ data }) {
+  const [tools, setTools] = useState([]);
+
+  useEffect(() => {
+    if (data) {
+      const nodes = data?.allContentfulTool?.nodes;
+      setTools(nodes);
+    }
+  }, [data]);
+  console.log(data, "data tools");
+  console.log(tools, "tools tools");
+
   return (
     <Layout>
       <title>Tools Page</title>
@@ -38,24 +51,42 @@ function Tools() {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {[...Array(10).keys()].map((item) => (
-            <SwiperSlide key={item} className="pb-10">
+          {tools.map((tool) => (
+            <SwiperSlide key={tool.id} className="pb-10">
               <Card sx={{ maxWidth: "100%" }} className="">
                 <CardMedia
                   component="img"
                   height="140"
                   src="https://image.freepik.com/free-photo/top-view-businessman-suit-talking-phone-while-writing-ideas-stickey-notes-working-financial-strategy-after-analyzing-company-documents-entrepreneur-man-planning-investments-meeting_482257-21435.jpg"
-                  alt="green iguana"
+                  alt={tool.title}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Slide {item + 1}
+                    {tool.title}
                   </Typography>
-                  <Typography variant=""></Typography>
+                  <Typography variant="body1">{tool.body}</Typography>
+
+                  <div className="flex w-fit border border-purple-400 rounded-md mt-4 overflow-hidden">
+                    <span className="border-r border-purple-400 flex-1 px-2 py-1">
+                      {tool.star}
+                    </span>
+                    <span className="flex items-center space-x-1 flex-1 px-2 py-1 bg-purple-800 text-white">
+                      <span>star</span> <HiOutlineStar />
+                    </span>
+                  </div>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
+                  <Button size="small">Visit</Button>
+                  <Button size="small">
+                    <a
+                      href={tool.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      className=""
+                    >
+                      Learn More
+                    </a>
+                  </Button>
                 </CardActions>
               </Card>
             </SwiperSlide>
@@ -65,5 +96,24 @@ function Tools() {
     </Layout>
   );
 }
+
+export const data = graphql`
+  query MyTools {
+    allContentfulTool {
+      nodes {
+        body
+        id
+        title
+        star
+        website
+        image {
+          file {
+            url
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Tools;

@@ -6,7 +6,6 @@ h3.partial-line {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin: auto;
   margin-bottom: 2rem;
 }
 
@@ -60,6 +59,17 @@ h3.partial-line::before {
   height: 1vmin;
   background-color: #c084fc;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 640px) {
+  .logo {
+    width: 8vmin;
+    height: 8vmin;
+  }
+  .logo::after {
+    width: 2vmin;
+    height: 2vmin;
+  }
 }
 
 .spacer {
