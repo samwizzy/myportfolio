@@ -13,11 +13,11 @@ const theme = createTheme({
       light: "#ffa733",
       main: "#ff9100",
       dark: "#b26500",
-      contrastText: "#000",
+      contrastText: "#fff",
     },
   },
   typography: {
-    fontFamily: ["Montserrat", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "Montserrat", "sans-serif"].join(","),
   },
 });
 

@@ -11,10 +11,6 @@ const navigation = [
   { name: "Tools", href: "/tools", current: false },
 ];
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(" ");
-// }
-
 export default function Appbar() {
   return (
     <Disclosure as="nav" className="bg-purple-600">
@@ -38,10 +34,7 @@ export default function Appbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <h1 className="font-bold text-xl text-gray-300">
-                    <span className="text-white">{"<>"}</span>SAM
-                    <span className="text-white">{"</>"}</span>
-                  </h1>
+                  <div className="logo" />
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">

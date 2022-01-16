@@ -17,9 +17,9 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4 font-medium">
           <div className="sm:col-span-3 col-span-12">
-            <h3 className="text-gray-300 uppercase font-black sm:mb-4 mb-2">
-              About Me
-            </h3>
+            <div className="flex items-center space-x-2 text-gray-300 uppercase font-black sm:mb-4 mb-2">
+              <div className="logo" /> <span> About Me</span>
+            </div>
             <div className="text-sm text-gray-400 leading-5">
               <p className="text-justify">
                 The frontend developer with panache. I am big on deep learning.
@@ -123,14 +123,6 @@ function Footer() {
               >
                 <div>
                   <figure>
-                    <span className="text-xs">samwize.inc@gmail.com</span>
-                    <figcaption className="text-xs text-purple-500 uppercase font-bold">
-                      Email
-                    </figcaption>
-                  </figure>
-                </div>
-                <div>
-                  <figure>
                     <span className="text-xs">07068962708</span>
                     <figcaption className="text-xs text-purple-500 uppercase font-bold">
                       Mobile
@@ -142,6 +134,14 @@ function Footer() {
                     <span className="text-xs">09071142337</span>
                     <figcaption className="text-xs text-purple-500 uppercase font-bold">
                       Contact
+                    </figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <figure>
+                    <span className="text-xs">samwize.inc@gmail.com</span>
+                    <figcaption className="text-xs text-purple-500 uppercase font-bold">
+                      Email
                     </figcaption>
                   </figure>
                 </div>
