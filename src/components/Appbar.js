@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "gatsby";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { HiOutlineBell, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineBell, HiOutlineMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { classNames } from "../utils/helpers";
 
 const navigation = [
@@ -25,7 +25,7 @@ export default function Appbar() {
                   {open ? (
                     <HiOutlineX className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <HiOutlineMenu
+                    <HiOutlineMenuAlt1
                       className="block h-6 w-6"
                       aria-hidden="true"
                     />

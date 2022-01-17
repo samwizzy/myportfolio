@@ -50,7 +50,15 @@ function Tools({ data }) {
         >
           {tools.map((tool) => (
             <SwiperSlide key={tool.id} className="pb-10">
-              <Card sx={{ maxWidth: "100%" }} className="">
+              <Card
+                sx={{
+                  maxWidth: "100%",
+                  minHeight: "300px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
                 <CardContent>
                   <div>
                     <div className="flex items-center space-x-1 mb-4">
