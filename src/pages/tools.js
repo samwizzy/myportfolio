@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
@@ -27,8 +26,6 @@ function Tools({ data }) {
       setTools(nodes);
     }
   }, [data]);
-  console.log(data, "data tools");
-  console.log(tools, "tools tools");
 
   return (
     <Layout>
@@ -54,23 +51,30 @@ function Tools({ data }) {
           {tools.map((tool) => (
             <SwiperSlide key={tool.id} className="pb-10">
               <Card sx={{ maxWidth: "100%" }} className="">
-                <CardMedia
-                  component="img"
-                  height="140"
-                  src="https://image.freepik.com/free-photo/top-view-businessman-suit-talking-phone-while-writing-ideas-stickey-notes-working-financial-strategy-after-analyzing-company-documents-entrepreneur-man-planning-investments-meeting_482257-21435.jpg"
-                  alt={tool.title}
-                />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {tool.title}
-                  </Typography>
-                  <Typography variant="body1">{tool.body}</Typography>
+                  <div>
+                    <div className="flex items-center space-x-1 mb-4">
+                      {tool.image && (
+                        <img
+                          src={tool.image?.file?.url}
+                          alt="tool"
+                          className="h-8 w-8"
+                        />
+                      )}
+                      <p className="font-medium text-lg text-gray-200">
+                        {tool.title}
+                      </p>
+                    </div>
+                    <Typography variant="body1" color="lightgray">
+                      {tool.body}
+                    </Typography>
+                  </div>
 
-                  <div className="flex w-fit border border-purple-400 rounded-md mt-4 overflow-hidden">
-                    <span className="border-r border-purple-400 flex-1 px-2 py-1">
+                  <div className="flex w-fit border border-purple-400 rounded-md mt-4 overflow-hidden shadow-md">
+                    <span className="border-r border-purple-400 flex-1 px-2 py-0.5">
                       {tool.star}
                     </span>
-                    <span className="flex items-center space-x-1 flex-1 px-2 py-1 bg-purple-800 text-white">
+                    <span className="flex items-center space-x-1 flex-1 px-2 py-0.5 bg-purple-800 text-white">
                       <span>star</span> <HiOutlineStar />
                     </span>
                   </div>
