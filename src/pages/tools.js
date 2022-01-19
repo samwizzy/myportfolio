@@ -88,7 +88,6 @@ function Tools({ data }) {
                   </div>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Visit</Button>
                   <Button size="small">
                     <a
                       href={tool.website}
