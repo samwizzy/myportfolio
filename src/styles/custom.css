@@ -76,6 +76,13 @@ h3.partial-line::before {
   background-image: url(../images/layered-waves.svg);
 }
 
+.request-bg {
+  background-image: url(../images/art.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /** swiper **/
 .swiper-button-next,
 .swiper-button-prev {

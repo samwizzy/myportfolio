@@ -24,14 +24,19 @@ function Portfolio({ data }) {
     <Layout>
       <title>Portfolio Page</title>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <h1 className="text-3xl font-bold text-gray-400 mb-4">Portfolio</h1>
 
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
           {projects.map((project) => (
             <Card
               key={project.id}
-              sx={{ maxWidth: "100%" }}
+              sx={{
+                maxWidth: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
               className="card sm:col-span-4 col-span-12"
             >
               <CardMedia
@@ -58,15 +63,17 @@ function Portfolio({ data }) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button
-                  size="small"
-                  component="a"
-                  href={project.projectUrl}
-                  target="_blank"
-                >
-                  Learn More
-                </Button>
+                <div className="px-3">
+                  <Button
+                    size="small"
+                    component="a"
+                    href={project.projectUrl}
+                    target="_blank"
+                    variant="outlined"
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </CardActions>
             </Card>
           ))}

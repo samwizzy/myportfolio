@@ -33,7 +33,12 @@
     {
       "text": "References",
       "description": "",
-      "lists": ["Okeme", "Kelechi", "Afeez", "Abiodun"],
+      "lists": [
+        { "name": "Okeme" },
+        { "name": "Kelechi" },
+        { "name": "Afeez" },
+        { "name": "Abiodun" }
+      ],
       "dir": "left"
     }
   ],

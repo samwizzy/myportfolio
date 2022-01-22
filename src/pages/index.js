@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
               <h1 className="text-xl font-thin text-purple-200 mb-2">
                 — Software Developer
               </h1>
-              <p className="text-sm italic font-mono mb-8">
+              <p className="text-sm text-gray-200 italic font-mono mb-8">
                 Works easy to work smart, apply logic and reapply precedence.
               </p>
               <Stack direction="row" spacing="16px" marginY="16px">
@@ -56,31 +56,12 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="spacer layer"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <title>Home Page</title>
-        <h1 className="mb-8">
-          Congratulations
-          <br />
-          <span className="text-purple-500 text-sm font-medium">
-            — you just made it to my Profile!
-          </span>
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
-        <p className="text-sm font-mono mb-4">
-          Follow me @{" "}
-          <code className="text-sm rounded-md p-2 bg-amber-50 text-purple-600">
-            @sampedia
-          </code>{" "}
-          to know more about me.
-          <span role="img" aria-label="Sunglasses smiley emoji">
-            😎
-          </span>
-        </p>
-        <ul className="mt-8">
-          <li className="mb-8">
-            <h2 className="text-purple-500 text-3xl font-black">Biography</h2>
+
+        <ul>
+          <li className="mb-16">
+            <h2 className="text-purple-500 text-6xl font-black">Biography</h2>
           </li>
           {db.profile.map((link) => (
             <li key={link.text} className="pb-8">
@@ -97,12 +78,12 @@ const IndexPage = ({ data }) => {
 
                 <p className="text-gray-400 leading-8 text-sm font-medium space-x-4">
                   {link.lists &&
-                    link.lists.map((name) => (
+                    link.lists.map((list) => (
                       <span
-                        key={name}
+                        key={list.name}
                         className=" bg-green-700 text-white p-1.5 rounded-md text-xs font-bold"
                       >
-                        {name}
+                        {list.name}
                       </span>
                     ))}
                 </p>
@@ -144,6 +125,17 @@ const IndexPage = ({ data }) => {
             src="/contentful.svg"
           />
         </div>
+
+        <p className="text-sm font-mono mt-4">
+          Follow me @{" "}
+          <code className="text-sm rounded-md p-2 bg-amber-50 text-purple-600">
+            @sampedia
+          </code>{" "}
+          to know more about me.
+          <span role="img" aria-label="Sunglasses smiley emoji">
+            😎
+          </span>
+        </p>
       </div>
     </Layout>
   );

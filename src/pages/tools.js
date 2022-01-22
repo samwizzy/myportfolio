@@ -31,7 +31,7 @@ function Tools({ data }) {
     <Layout>
       <title>Tools Page</title>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <h1 className="text-3xl font-bold text-gray-400 mb-4">Tools</h1>
 
         <Swiper

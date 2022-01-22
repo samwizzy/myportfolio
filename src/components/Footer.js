@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer className="py-12 border-t border-purple-800 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4 font-medium">
+        <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
             <div className="flex items-center space-x-2 text-gray-300 uppercase font-black sm:mb-4 mb-2">
               <div className="logo" />{" "}
@@ -52,6 +52,11 @@ function Footer() {
               <li>
                 <Link to="/tools" className="hover:text-purple-500">
                   Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/request" className="hover:text-purple-500">
+                  Drop a request
                 </Link>
               </li>
             </ul>

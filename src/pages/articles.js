@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 function Articles({ data }) {
   const articles = data.articles.nodes;
@@ -15,7 +15,7 @@ function Articles({ data }) {
     <Layout>
       <title>Article Page</title>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <h1 className="text-3xl font-bold text-gray-400 mb-4">Article</h1>
 
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
@@ -32,7 +32,12 @@ function Articles({ data }) {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: 800, mb: 3 }}
+                >
                   {article.title}
                 </Typography>
                 <div
@@ -42,8 +47,16 @@ function Articles({ data }) {
                 />
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <div className="px-3">
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    component={Link}
+                    to={`/articles/${article.slug}`}
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </CardActions>
             </Card>
           ))}
@@ -57,8 +70,9 @@ export const data = graphql`
   query ArticlesPage {
     articles: allContentfulArticle {
       nodes {
-        title
         id
+        title
+        slug
         body {
           childMarkdownRemark {
             html
