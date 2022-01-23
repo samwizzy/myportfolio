@@ -1,4 +1,5 @@
 const path = require("path");
+const slugify = require("slugify");
 
 exports.createPages = async ({ graphql, page, actions }) => {
   const { createPage } = actions;
@@ -16,9 +17,9 @@ exports.createPages = async ({ graphql, page, actions }) => {
 
   data.articles.nodes.forEach((node) => {
     createPage({
-      path: `/articles/${node.slug}`,
+      path: `/articles/${slugify(node.title)}`,
       component: path.resolve("./src/templates/article-details.js"),
-      context: { slug: node.slug, title: node.title },
+      context: { slug: slugify(node.slug), title: node.title },
     });
   });
 };

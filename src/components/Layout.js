@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function Layout({ children }) {
   return (
-    <div className="w-full">
+    <div className="w-full bg-slate-50">
       <Appbar />
 
       <main>{children}</main>

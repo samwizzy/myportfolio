@@ -7,22 +7,21 @@ function ArticleDetails({ data }) {
 
   return (
     <Layout>
-      <title>Article Page</title>
+      <title>Article details Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-3xl font-bold text-gray-400 mb-8">
-          Article Details
-        </h1>
-
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
-          <div className="col-span-12">
-            <h2 className="text-xl font-bold mb-8">{title}</h2>
+          <div className="sm:col-span-8 col-span-12">
+            <h1 className="text-3xl font-bold text-gray-400 mb-8">{title}</h1>
             <div
-              className="font-light"
+              className="overflow-auto leading-7"
               dangerouslySetInnerHTML={{
                 __html: body?.childMarkdownRemark?.html,
               }}
             />
+          </div>
+          <div className="sm:col-span-4 col-span-12">
+            <h1 className="text-xl font-black text-gray-400">Metadata</h1>
           </div>
         </div>
       </div>

@@ -25,9 +25,9 @@ function Portfolio({ data }) {
       <title>Portfolio Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-400 mb-4">Portfolio</h1>
+        <h1 className="text-3xl font-bold text-gray-600 mb-4">Portfolio</h1>
 
-        <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
+        <div className="grid grid-cols-12 sm:gap-12 gap-x-0 gap-y-8">
           {projects.map((project) => (
             <Card
               key={project.id}
@@ -63,7 +63,7 @@ function Portfolio({ data }) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <div className="px-3">
+                <div className="px-2">
                   <Button
                     size="small"
                     component="a"

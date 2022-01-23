@@ -130,7 +130,7 @@ function Footer() {
                 <div>
                   <figure>
                     <span className="text-xs">07068962708</span>
-                    <figcaption className="text-xs text-purple-500 uppercase font-bold">
+                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
                       Mobile
                     </figcaption>
                   </figure>
@@ -138,7 +138,7 @@ function Footer() {
                 <div>
                   <figure>
                     <span className="text-xs">09071142337</span>
-                    <figcaption className="text-xs text-purple-500 uppercase font-bold">
+                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
                       Contact
                     </figcaption>
                   </figure>
@@ -146,7 +146,7 @@ function Footer() {
                 <div>
                   <figure>
                     <span className="text-xs">samwize.inc@gmail.com</span>
-                    <figcaption className="text-xs text-purple-500 uppercase font-bold">
+                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
                       Email
                     </figcaption>
                   </figure>
@@ -160,7 +160,7 @@ function Footer() {
             </h3>
             <Stack direction="column" spacing="1" alignItems="flex-start">
               <FormControl variant="outlined" fullWidth css={formControl}>
-                <FormLabel>Message</FormLabel>
+                <FormLabel sx={{ mb: 1 }}>Message</FormLabel>
                 <OutlinedInput
                   placeholder="Hi, lets have a chat"
                   multiline

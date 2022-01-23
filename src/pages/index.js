@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <title>About Me Page</title>
+      <title>Home Page</title>
 
       <div className="w-full h-96 bg-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,11 +57,9 @@ const IndexPage = ({ data }) => {
       <div className="spacer layer"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <title>Home Page</title>
-
         <ul>
-          <li className="mb-16">
-            <h2 className="text-purple-500 text-6xl font-black">Biography</h2>
+          <li className="sm:mb-16 mb-8">
+            <h2 className="text-purple-600 text-6xl font-black">Biography</h2>
           </li>
           {db.profile.map((link) => (
             <li key={link.text} className="pb-8">
@@ -88,7 +86,7 @@ const IndexPage = ({ data }) => {
                     ))}
                 </p>
                 <p
-                  className="text-gray-400 leading-8 text-base font-normal"
+                  className="text-gray-600 leading-8 text-base font-normal"
                   style={{ textAlign: link.dir }}
                 >
                   {link.description}
@@ -128,7 +126,7 @@ const IndexPage = ({ data }) => {
 
         <p className="text-sm font-mono mt-4">
           Follow me @{" "}
-          <code className="text-sm rounded-md p-2 bg-amber-50 text-purple-600">
+          <code className="text-sm rounded-md p-2 bg-purple-100 text-purple-600">
             @sampedia
           </code>{" "}
           to know more about me.

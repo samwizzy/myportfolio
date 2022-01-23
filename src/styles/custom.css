@@ -73,7 +73,7 @@ h3.partial-line::before {
 }
 
 .layer {
-  background-image: url(../images/layered-waves.svg);
+  background-image: url(../images/bg-waves.svg);
 }
 
 .request-bg {
@@ -81,6 +81,13 @@ h3.partial-line::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 1px solid #c084fc;
+}
+.MuiFormLabel-root {
+  color: #c084fc;
 }
 
 /** swiper **/

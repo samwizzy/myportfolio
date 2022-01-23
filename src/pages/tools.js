@@ -32,7 +32,9 @@ function Tools({ data }) {
       <title>Tools Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-400 mb-4">Tools</h1>
+        <h1 className="text-3xl font-bold text-gray-600 mb-4">
+          Most Used Tools
+        </h1>
 
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -69,35 +71,37 @@ function Tools({ data }) {
                           className="h-8 w-8"
                         />
                       )}
-                      <p className="font-medium text-lg text-gray-200">
+                      <p className="font-medium text-lg text-gray-600">
                         {tool.title}
                       </p>
                     </div>
-                    <Typography variant="body1" color="lightgray">
+                    <Typography variant="body1" color="">
                       {tool.body}
                     </Typography>
                   </div>
 
-                  <div className="flex w-fit border border-purple-400 rounded-md mt-4 overflow-hidden shadow-md">
-                    <span className="border-r border-purple-400 flex-1 px-2 py-0.5">
+                  <div className="flex w-fit border border-purple-200 rounded-md mt-4 overflow-hidden shadow-sm">
+                    <span className="border-r border-purple-200 flex-1 px-2 py-0.5">
                       {tool.star}
                     </span>
-                    <span className="flex items-center space-x-1 flex-1 px-2 py-0.5 bg-purple-800 text-white">
+                    <span className="flex items-center space-x-1 flex-1 px-2 py-0.5 bg-purple-500 text-white">
                       <span>star</span> <HiOutlineStar />
                     </span>
                   </div>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">
-                    <a
-                      href={tool.website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className=""
-                    >
-                      Learn More
-                    </a>
-                  </Button>
+                  <div className="px-2">
+                    <Button size="small" variant="outlined">
+                      <a
+                        href={tool.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className=""
+                      >
+                        Learn More
+                      </a>
+                    </Button>
+                  </div>
                 </CardActions>
               </Card>
             </SwiperSlide>

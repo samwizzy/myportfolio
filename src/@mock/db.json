@@ -41,27 +41,5 @@
       ],
       "dir": "left"
     }
-  ],
-  "tools": [
-    {
-      "title": "React",
-      "body": "",
-      "image": ""
-    },
-    {
-      "title": "Angular",
-      "body": "",
-      "image": ""
-    },
-    {
-      "title": "VueJs",
-      "body": "",
-      "image": ""
-    },
-    {
-      "title": "Gatsby",
-      "body": "",
-      "image": ""
-    }
   ]
 }

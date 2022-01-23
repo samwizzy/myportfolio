@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
+import slugify from "slugify";
 
 function Articles({ data }) {
   const articles = data.articles.nodes;
@@ -16,14 +17,14 @@ function Articles({ data }) {
       <title>Article Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-400 mb-4">Article</h1>
+        <h1 className="text-3xl font-bold text-gray-600 mb-4">Articles</h1>
 
-        <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
+        <div className="grid grid-cols-12 sm:gap-x-12 gap-x-0 gap-y-8">
           {articles.map((article) => (
             <Card
               key={article.id}
               sx={{ maxWidth: "100%" }}
-              className="sm:col-span-4 col-span-12"
+              className="sm:col-span-6 col-span-12"
             >
               <CardMedia
                 component="img"
@@ -42,17 +43,17 @@ function Articles({ data }) {
                 </Typography>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: article.body?.childMarkdownRemark?.html,
+                    __html: article.body?.childMarkdownRemark?.excerpt,
                   }}
                 />
               </CardContent>
               <CardActions>
-                <div className="px-3">
+                <div className="px-2">
                   <Button
                     size="small"
                     variant="outlined"
                     component={Link}
-                    to={`/articles/${article.slug}`}
+                    to={`/articles/${slugify(article.title)}`}
                   >
                     Learn More
                   </Button>
@@ -76,6 +77,7 @@ export const data = graphql`
         body {
           childMarkdownRemark {
             html
+            excerpt(format: HTML)
           }
         }
       }
