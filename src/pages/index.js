@@ -5,6 +5,7 @@ import { classNames } from "../utils/helpers";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import WorkTimeline from "../components/partials/WorkTimeline";
+import { HiOutlineDocumentText } from "react-icons/hi";
 
 const IndexPage = ({ data }) => {
   const { profile } = data;
@@ -99,27 +100,33 @@ const IndexPage = ({ data }) => {
         </ul>
       </div>
 
-      <div className="w-full bg-white my-4 mb-8">
+      <div className="w-full bg-white shadow-sm my-4 mb-8">
         <div className="w-full mx-auto">
           <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
-            <div className="sm:col-span-6 col-span-12 px-4 sm:px-6 lg:px-8 py-16 bg-slate-600 bg-timeline text-right relative">
-              <div className="border bg-black p-16 bg-transition">
-                <h2 className="text-6xl font-black text-purple-600 mb-4">
-                  Job History
-                </h2>
-                <p className="text-base text-gray-400 italic mb-4">
-                  Its been quite a journey for me, <br />I can now see where
-                  this road leads.
-                  <br />I want you to know how far I have come.
-                </p>
+            <div className="sm:col-span-6 col-span-12 flex items-center px-4 sm:px-6 lg:px-8 sm:py-8 py-4 bg-slate-600 bg-timeline relative">
+              <div className="w-full sm:flex items-center justify-between bg-black p-16 bg-transition text-right">
+                <HiOutlineDocumentText
+                  className="text-purple-600 "
+                  size="200px"
+                />
+                <div>
+                  <h2 className="text-6xl font-black text-purple-600 mb-4">
+                    Job History
+                  </h2>
+                  <p className="text-base text-gray-200 italic mb-4">
+                    Its been quite a journey for me, <br />I can now see where
+                    this road leads.
+                    <br />I want you to know how far I have come.
+                  </p>
 
-                <div className="space-x-3">
-                  <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
-                    View CV
-                  </button>
-                  <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
-                    Download CV
-                  </button>
+                  <div className="sm:space-x-3 space-x-1 space-y-2">
+                    <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                      View CV
+                    </button>
+                    <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                      Download CV
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
