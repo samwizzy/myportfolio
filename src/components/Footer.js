@@ -217,7 +217,7 @@ function Footer() {
 
         <div className="flex flex-col items-center text-center">
           <div>
-            <h1 className="text-3xl font-black text-gray-500">
+            <h1 className="text-3xl font-black text-gray-400">
               SAMUEL C. OKEKE
             </h1>
           </div>

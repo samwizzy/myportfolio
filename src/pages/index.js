@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
               <h1 className="text-7xl font-thin text-purple-200">
                 Samuel <span className="font-black">Okeke</span>
               </h1>
-              <h1 className="text-xl font-thin text-purple-200 mb-2">
+              <h1 className="text-xl font-light text-purple-200 mb-8">
                 — Software Developer
               </h1>
               <p className="text-sm text-gray-200 italic font-mono mb-8">
@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
                   {link.title}
                 </h3>
 
-                <p className="text-gray-400 leading-8 text-sm font-medium space-x-2">
+                <p className="text-gray-400 text-sm font-medium space-x-2">
                   {link.reference &&
                     link.reference.map((ref) => (
                       <span
@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
                     ))}
                 </p>
                 <div
-                  className="text-gray-600 leading-8 text-base font-normal"
+                  className="text-gray-600 font-normal"
                   dangerouslySetInnerHTML={{
                     __html: link.body?.childMarkdownRemark?.html,
                   }}
@@ -104,29 +104,24 @@ const IndexPage = ({ data }) => {
         <div className="w-full mx-auto">
           <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
             <div className="sm:col-span-6 col-span-12 flex items-center px-4 sm:px-6 lg:px-8 sm:py-8 py-4 bg-slate-600 bg-timeline relative">
-              <div className="w-full sm:flex items-center justify-between bg-black p-16 bg-transition text-right">
-                <HiOutlineDocumentText
-                  className="text-purple-600 "
-                  size="200px"
-                />
-                <div>
-                  <h2 className="text-6xl font-black text-purple-600 mb-4">
-                    Job History
-                  </h2>
-                  <p className="text-base text-gray-200 italic mb-4">
-                    Its been quite a journey for me, <br />I can now see where
-                    this road leads.
-                    <br />I want you to know how far I have come.
-                  </p>
+              <div className="w-full justify-between bg-black sm:p-16 p-8 bg-transition">
+                <h2 className="flex items-center space-x-1 text-6xl font-black text-purple-200 mb-4">
+                  <span>Job History</span>
+                  <HiOutlineDocumentText />
+                </h2>
+                <p className="text-base text-gray-200 italic mb-4">
+                  Its been quite a journey for me, <br />I can now see where
+                  this road leads.
+                  <br />I want you to know how far I have come.
+                </p>
 
-                  <div className="sm:space-x-3 space-x-1 space-y-2">
-                    <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
-                      View CV
-                    </button>
-                    <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
-                      Download CV
-                    </button>
-                  </div>
+                <div className="sm:space-x-3 space-x-1 space-y-2">
+                  <button className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                    View CV
+                  </button>
+                  <button className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                    Download CV
+                  </button>
                 </div>
               </div>
             </div>

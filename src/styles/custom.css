@@ -95,17 +95,22 @@ h3.partial-line::before {
   transition: all 1s;
 }
 
-.bg-transition h2 {
+.bg-transition h2,
+.bg-transition p {
   transition: all 1s;
 }
 
-.bg-transition:hover > h2 {
-  color: #fff;
+.bg-transition:hover > h2,
+.bg-transition:hover > p {
+  color: #666;
 }
 
 .bg-transition:hover {
   opacity: 1;
-  background-image: url(../images/dye-art.jpg);
+  background-image: url(../images/art.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .MuiOutlinedInput-notchedOutline {

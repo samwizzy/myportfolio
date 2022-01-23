@@ -38,6 +38,7 @@ function Articles({ data }) {
                   variant="h5"
                   component="div"
                   sx={{ fontWeight: 800, mb: 3 }}
+                  className="text-gray-600"
                 >
                   {article.title}
                 </Typography>

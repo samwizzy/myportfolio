@@ -56,6 +56,10 @@ module.exports = {
           fonts: {
             google: [
               {
+                family: `Quicksand`,
+                variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+              },
+              {
                 family: `Roboto`,
                 variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
               },
