@@ -83,6 +83,23 @@ h3.partial-line::before {
   background-position: center;
 }
 
+.bg-timeline {
+  background-image: url(../images/request-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-transition {
+  opacity: 0.8;
+  transition: all 1s;
+}
+
+.bg-transition:hover {
+  opacity: 1;
+  background-image: url(../images/dye-art.jpg);
+}
+
 .MuiOutlinedInput-notchedOutline {
   border: 1px solid #c084fc;
 }

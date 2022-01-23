@@ -2,11 +2,14 @@ import { graphql, Link } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
-import db from "../@mock/db.json";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import WorkTimeline from "../components/partials/WorkTimeline";
 
 const IndexPage = ({ data }) => {
+  const { profile } = data;
+  console.log(data, "data");
+
   return (
     <Layout>
       <title>Home Page</title>
@@ -56,45 +59,78 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="spacer layer"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ul>
           <li className="sm:mb-16 mb-8">
             <h2 className="text-purple-600 text-6xl font-black">Biography</h2>
           </li>
-          {db.profile.map((link) => (
-            <li key={link.text} className="pb-8">
+          {profile.nodes.map((link) => (
+            <li key={link.id} className="py-4">
               <div>
                 <h3
                   className={classNames(
                     "text-purple-500 text-2xl font-bold uppercase mb-3",
-                    link.underline && "partial-line"
+                    link.isUnderlined && "partial-line"
                   )}
-                  style={{ textAlign: link.dir }}
                 >
-                  {link.text}
+                  {link.title}
                 </h3>
 
-                <p className="text-gray-400 leading-8 text-sm font-medium space-x-4">
-                  {link.lists &&
-                    link.lists.map((list) => (
+                <p className="text-gray-400 leading-8 text-sm font-medium space-x-2">
+                  {link.reference &&
+                    link.reference.map((ref) => (
                       <span
-                        key={list.name}
+                        key={ref}
                         className=" bg-green-700 text-white p-1.5 rounded-md text-xs font-bold"
                       >
-                        {list.name}
+                        {ref}
                       </span>
                     ))}
                 </p>
-                <p
+                <div
                   className="text-gray-600 leading-8 text-base font-normal"
-                  style={{ textAlign: link.dir }}
-                >
-                  {link.description}
-                </p>
+                  dangerouslySetInnerHTML={{
+                    __html: link.body?.childMarkdownRemark?.html,
+                  }}
+                />
               </div>
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="w-full bg-white my-4 mb-8">
+        <div className="w-full mx-auto">
+          <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
+            <div className="sm:col-span-6 col-span-12 px-4 sm:px-6 lg:px-8 py-16 bg-slate-600 bg-timeline text-right relative">
+              <div className="border bg-black p-16 bg-transition">
+                <h2 className="text-6xl font-black text-purple-600 mb-4">
+                  Job History
+                </h2>
+                <p className="text-base text-gray-400 italic mb-4">
+                  Its been quite a journey for me, <br />I can now see where
+                  this road leads.
+                  <br />I want you to know how far I have come.
+                </p>
+
+                <div className="space-x-3">
+                  <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                    View CV
+                  </button>
+                  <button className="border border-purple-600 text-purple-600 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                    Download CV
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="sm:col-span-6 col-span-12 px-4 sm:px-6 lg:px-8 py-16">
+              <WorkTimeline />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div>
           <span className="text-sm font-mono">Proudly Designed with</span>
           <img
@@ -145,6 +181,20 @@ export const query = graphql`
       siteMetadata {
         title
         siteUrl
+      }
+    }
+    profile: allContentfulProfile(sort: { fields: createdAt }) {
+      nodes {
+        id
+        isUnderlined
+        title
+        body {
+          childMarkdownRemark {
+            html
+            excerpt(format: HTML)
+          }
+        }
+        reference
       }
     }
   }
