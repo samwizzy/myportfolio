@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
               <div>
                 <h3
                   className={classNames(
-                    "text-purple-500 text-2xl font-bold uppercase mb-3",
+                    "text-gray-600 text-2xl font-bold uppercase mb-3",
                     link.isUnderlined && "partial-line"
                   )}
                 >
@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
                     ))}
                 </p>
                 <div
-                  className="text-gray-600 font-normal"
+                  className="text-gray-600"
                   dangerouslySetInnerHTML={{
                     __html: link.body?.childMarkdownRemark?.html,
                   }}

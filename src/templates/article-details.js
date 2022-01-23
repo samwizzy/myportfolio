@@ -12,7 +12,7 @@ function ArticleDetails({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
           <div className="sm:col-span-8 col-span-12">
-            <h1 className="text-3xl font-bold text-gray-400 mb-8">{title}</h1>
+            <h1 className="text-3xl font-bold text-gray-600 mb-8">{title}</h1>
             <div
               className="overflow-auto leading-7"
               dangerouslySetInnerHTML={{
@@ -21,7 +21,9 @@ function ArticleDetails({ data }) {
             />
           </div>
           <div className="sm:col-span-4 col-span-12">
-            <h1 className="text-xl font-black text-gray-400">Metadata</h1>
+            <h1 className="text-xl font-black text-gray-600">
+              Favorite Articles
+            </h1>
           </div>
         </div>
       </div>

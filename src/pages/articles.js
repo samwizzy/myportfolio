@@ -40,7 +40,9 @@ function Articles({ data }) {
                   sx={{ fontWeight: 800, mb: 3 }}
                   className="text-gray-600"
                 >
-                  {article.title}
+                  <Link to={`/articles/${slugify(article.title)}`}>
+                    {article.title}
+                  </Link>
                 </Typography>
                 <div
                   dangerouslySetInnerHTML={{
