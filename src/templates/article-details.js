@@ -7,7 +7,7 @@ function ArticleDetails({ data }) {
 
   return (
     <Layout>
-      <title>Article details Page</title>
+      <title>Article details</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
