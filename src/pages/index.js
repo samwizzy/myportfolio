@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { graphql, Link, withPrefix } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
@@ -26,9 +26,15 @@ const IndexPage = ({ data }) => {
               <h1 className="text-xl font-light text-purple-200 mb-8">
                 — Software Developer
               </h1>
-              <p className="text-sm text-gray-200 italic font-mono mb-8">
+              <h3 className="text-sm font-bold text-purple-100">My quote</h3>
+              <p className="text-sm text-gray-200 italic font-mono mb-4">
                 Works easy to work smart, apply logic and reapply precedence.
               </p>
+              <h3 className="text-sm font-bold text-purple-100">His quote</h3>
+              <p className="text-sm text-gray-200 italic font-mono mb-8">
+                Creativity is intelligence having fun. — Albert Einstein
+              </p>
+
               <Stack direction="row" spacing="16px" marginY="16px">
                 <Button
                   variant="contained"
@@ -116,12 +122,22 @@ const IndexPage = ({ data }) => {
                 </p>
 
                 <div className="sm:space-x-3 space-x-1 space-y-2">
-                  <button className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                  <a
+                    href={withPrefix("./resume.pdf")}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2"
+                  >
                     View CV
-                  </button>
-                  <button className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2">
+                  </a>
+                  <a
+                    href={withPrefix("./resume.pdf")}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2"
+                  >
                     Download CV
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

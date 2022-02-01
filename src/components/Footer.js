@@ -25,7 +25,7 @@ function Footer() {
               <p className="text-justify">
                 The frontend developer with panache. I am big on deep learning.
                 I enjoy training people, and I am an advocate of best practices.
-                If we can do, we might as well, do it well.
+                If we can do it, we might as well, do it well.
               </p>
             </div>
           </div>

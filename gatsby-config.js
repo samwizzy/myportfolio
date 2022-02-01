@@ -50,6 +50,15 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pdfs",
+        path: "./src/pdfs/",
+      },
+      __key: "pdfs",
+    },
+    `gatsby-transformer-pdf`,
+    {
       resolve: `gatsby-theme-material-ui`,
       options: {
         webFontsConfig: {
