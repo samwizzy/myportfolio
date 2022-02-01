@@ -35,13 +35,13 @@ const IndexPage = ({ data }) => {
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full text-lg shadow-sm border border-purple-700 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
+                  className="rounded-full text-lg shadow-md border border-purple-700 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
                   to="/tools"
                 >
                   Tools
                 </Link>
                 <Link
-                  className="rounded-full text-lg shadow-sm bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
+                  className="rounded-full text-lg shadow-md bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
                   to="/portfolio"
                 >
                   Portfolio
