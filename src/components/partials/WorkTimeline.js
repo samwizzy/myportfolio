@@ -5,6 +5,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import { MdLaptopMac } from "react-icons/md";
 
 function WorkTimelIne() {
   return (
@@ -12,7 +13,9 @@ function WorkTimelIne() {
       <Timeline position="alternate">
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot variant="outlined" color="primary">
+              <MdLaptopMac />
+            </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -22,7 +25,9 @@ function WorkTimelIne() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot variant="outlined" color="secondary">
+              <MdLaptopMac />
+            </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -32,7 +37,9 @@ function WorkTimelIne() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot variant="outlined" color="primary">
+              <MdLaptopMac />
+            </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -42,7 +49,9 @@ function WorkTimelIne() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot variant="outlined" color="secondary">
+              <MdLaptopMac />
+            </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -52,7 +61,9 @@ function WorkTimelIne() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot variant="outlined" color="primary">
+              <MdLaptopMac />
+            </TimelineDot>
           </TimelineSeparator>
           <TimelineContent>
             <h3 className="text-purple-600">2014</h3>

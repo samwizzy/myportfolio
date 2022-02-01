@@ -2,14 +2,12 @@ import { graphql, Link, withPrefix } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
-import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import WorkTimeline from "../components/partials/WorkTimeline";
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 const IndexPage = ({ data }) => {
   const { profile } = data;
-  console.log(data, "data");
 
   return (
     <Layout>
@@ -23,39 +21,31 @@ const IndexPage = ({ data }) => {
               <h1 className="text-7xl font-thin text-purple-200">
                 Samuel <span className="font-black">Okeke</span>
               </h1>
-              <h1 className="text-xl font-light text-purple-200 mb-8">
+              <h1 className="sm:text-xl text-lg font-light text-purple-200 ml-1 sm:mb-8 mb-3">
                 — Software Developer
               </h1>
               <h3 className="text-sm font-bold text-purple-100">My quote</h3>
-              <p className="text-sm text-gray-200 italic font-mono mb-4">
+              <p className="text-sm text-gray-200 italic font-mono sm:mb-4 mb-2">
                 Works easy to work smart, apply logic and reapply precedence.
               </p>
               <h3 className="text-sm font-bold text-purple-100">His quote</h3>
-              <p className="text-sm text-gray-200 italic font-mono mb-8">
+              <p className="text-sm text-gray-200 italic font-mono sm:mb-8 mb-4">
                 Creativity is intelligence having fun. — Albert Einstein
               </p>
 
-              <Stack direction="row" spacing="16px" marginY="16px">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  className="rounded-xl"
-                  component={Link}
+              <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
+                <Link
+                  className="rounded-full text-lg border border-purple-700 bg-purple-900 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
                   to="/tools"
                 >
                   Tools
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  size="large"
-                  className="rounded-xl"
-                  component={Link}
+                </Link>
+                <Link
+                  className="rounded-full text-lg border border-purple-900 bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
                   to="/portfolio"
                 >
                   Portfolio
-                </Button>
+                </Link>
               </Stack>
             </div>
             <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block hidden">
@@ -64,7 +54,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="spacer layer"></div>
+      <div className="sm:bg-purple-900 spacer layer"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ul>
@@ -121,7 +111,7 @@ const IndexPage = ({ data }) => {
                   <br />I want you to know how far I have come.
                 </p>
 
-                <div className="sm:space-x-3 space-x-1 space-y-2">
+                <div className="sm:space-x-3 space-x-2 space-y-2">
                   <a
                     href={withPrefix("./resume.pdf")}
                     target="_blank"
@@ -141,7 +131,7 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="sm:col-span-6 col-span-12 px-4 sm:px-6 lg:px-8 py-16">
+            <div className="sm:col-span-6 col-span-12 px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
               <WorkTimeline />
             </div>
           </div>
