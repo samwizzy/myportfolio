@@ -96,7 +96,8 @@ h3.partial-line::before {
 }
 
 .bg-transition h2,
-.bg-transition p {
+.bg-transition p,
+.bg-transition a {
   transition: all 1s;
 }
 
@@ -111,6 +112,11 @@ h3.partial-line::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.bg-transition:hover * a {
+  background-color: #7e22ce !important;
+  color: #fff !important;
 }
 
 .MuiOutlinedInput-notchedOutline {

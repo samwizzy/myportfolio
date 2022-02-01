@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       <div className="w-full h-96 bg-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
-            <div className="sm:col-span-6 col-span-12 sm:pt-32 pt-12">
+            <div className="sm:col-span-6 col-span-12 sm:pt-32 pt-8">
               <h1 className="text-xl font-mono text-purple-200 ml-1">I am</h1>
               <h1 className="text-7xl font-thin text-purple-200">
                 Samuel <span className="font-black">Okeke</span>
@@ -35,13 +35,13 @@ const IndexPage = ({ data }) => {
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full text-lg border border-purple-700 bg-purple-900 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
+                  className="rounded-full text-lg shadow-sm border border-purple-700 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
                   to="/tools"
                 >
                   Tools
                 </Link>
                 <Link
-                  className="rounded-full text-lg border border-purple-900 bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
+                  className="rounded-full text-lg shadow-sm bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
                   to="/portfolio"
                 >
                   Portfolio
