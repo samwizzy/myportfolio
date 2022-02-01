@@ -3,10 +3,13 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
+import { HiOutlineClock } from "react-icons/hi";
 import slugify from "slugify";
 
 function Articles({ data }) {
@@ -33,17 +36,35 @@ function Articles({ data }) {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: 800, mb: 3 }}
-                  className="text-gray-600"
-                >
-                  <Link to={`/articles/${slugify(article.title)}`}>
-                    {article.title}
-                  </Link>
-                </Typography>
+                <div className="mb-3">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    className="text-gray-600 font-bold"
+                  >
+                    <Link to={`/articles/${slugify(article.title)}`}>
+                      {article.title}
+                    </Link>
+                  </Typography>
+
+                  <Stack direction="row" spacing={2} alignItems="center">
+                    <div className="flex items-center text-sm text-gray-800">
+                      <Avatar
+                        sx={{ width: 24, height: 24, mr: 0.5 }}
+                        alt="Samuel Okeke"
+                        src="https://ik.imagekit.io/3ugevgshj2i/samjpg_M6cSaT7Vjxu.jpg?updatedAt=1641379507144"
+                      />
+                      <span className="text-sm text-gray-800">
+                        Samuel Okeke
+                      </span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-800">
+                      <HiOutlineClock />
+                      <span className="text-sm">21 Jan 2022 09:30</span>
+                    </div>
+                  </Stack>
+                </div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: article.body?.childMarkdownRemark?.excerpt,
@@ -51,7 +72,7 @@ function Articles({ data }) {
                 />
               </CardContent>
               <CardActions>
-                <div className="px-2">
+                <div className="px-2 pb-2">
                   <Button
                     size="small"
                     variant="outlined"

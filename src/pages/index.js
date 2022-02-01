@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
         </ul>
       </div>
 
-      <div className="w-full bg-white shadow-sm my-4 mb-8">
+      <div className="w-full bg-gray-900 shadow-sm my-4 mb-8">
         <div className="w-full mx-auto">
           <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
             <div className="sm:col-span-6 col-span-12 flex items-center px-4 sm:px-6 lg:px-8 sm:py-8 py-4 bg-slate-600 bg-timeline relative">

@@ -21,8 +21,8 @@ h3.partial-line::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vmin;
-  height: 4vmin;
+  width: 3vmin;
+  height: 3vmin;
   border: 2px solid #d8b4fe;
   border-radius: 100% 10%;
   pointer-events: none;
@@ -47,8 +47,8 @@ h3.partial-line::before {
   position: absolute;
   display: block;
   content: "";
-  width: 4vmin;
-  height: 4vmin;
+  width: 3vmin;
+  height: 3vmin;
   border: 2px solid #c084fc;
   border-radius: 10% 100%;
   pointer-events: none;

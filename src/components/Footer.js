@@ -13,15 +13,15 @@ import { Button, FormControl, FormLabel, OutlinedInput } from "@mui/material";
 
 function Footer() {
   return (
-    <footer className="py-12 border-t border-purple-800 bg-black">
+    <footer className="py-12 border-t border-purple-800 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
-            <div className="flex items-center space-x-2 text-gray-300 uppercase font-black sm:mb-4 mb-2">
+            <div className="flex items-center space-x-2 text-gray-100 uppercase font-black sm:mb-4 mb-2">
               <div className="logo" />{" "}
               <span className="lg:inline-flex hidden"> About Me</span>
             </div>
-            <div className="text-sm text-gray-400 leading-5">
+            <div className="text-sm text-gray-300 leading-5">
               <p className="text-justify">
                 The frontend developer with panache. I am big on deep learning.
                 I enjoy training people, and I am an advocate of best practices.
@@ -30,7 +30,7 @@ function Footer() {
             </div>
           </div>
           <div className="sm:col-span-2 col-span-12">
-            <h3 className="text-gray-300 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Links
             </h3>
             <ul className="text-sm text-purple-400 leading-6">
@@ -62,7 +62,7 @@ function Footer() {
             </ul>
           </div>
           <div className="sm:col-span-2 col-span-12">
-            <h3 className="text-gray-300 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Socials
             </h3>
             <ul className="text-sm text-purple-400 leading-6">
@@ -119,10 +119,10 @@ function Footer() {
             </ul>
           </div>
           <div className="sm:col-span-2 col-span-12">
-            <h3 className="text-gray-300 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Contact
             </h3>
-            <div className="text-sm text-gray-400 leading-6">
+            <div className="text-sm text-gray-300 leading-6">
               <Stack
                 direction={{ sm: "column", xs: "column" }}
                 spacing={{ sm: 1 }}
@@ -155,7 +155,7 @@ function Footer() {
             </div>
           </div>
           <div className="sm:col-span-3 col-span-12">
-            <h3 className="text-gray-300 uppercase font-black mb-4">
+            <h3 className="text-gray-100 uppercase font-black mb-4">
               Drop a message
             </h3>
             <Stack direction="column" spacing="1" alignItems="flex-start">
@@ -236,6 +236,13 @@ const formControl = css`
   & .MuiFormLabel-root {
     font-size: 0.875rem;
     line-height: 1.25rem;
+    color: #c084fc;
+  }
+  & .MuiOutlinedInput-input {
+    color: #fff;
+  }
+  & .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #c084fc;
   }
   & .MuiOutlinedInput-input {
     ::placeholder {

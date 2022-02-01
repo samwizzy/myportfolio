@@ -63,7 +63,7 @@ function Portfolio({ data }) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <div className="px-2">
+                <div className="px-2 pb-2">
                   <Button
                     size="small"
                     component="a"

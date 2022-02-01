@@ -14,60 +14,60 @@ function WorkTimelIne() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot variant="outlined" color="primary">
-              <MdLaptopMac />
+              <MdLaptopMac color="#fff" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-600">2021</h3>
-            <p className="text-sm">Intelligent Innovations</p>
+            <h3 className="text-purple-400">2021</h3>
+            <p className="text-sm text-white">Intelligent Innovations</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot variant="outlined" color="secondary">
-              <MdLaptopMac />
+              <MdLaptopMac color="#fff" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-600">2019 — 2020</h3>
-            <p className="text-sm">Optisoft Technology</p>
+            <h3 className="text-purple-400">2019 — 2020</h3>
+            <p className="text-sm text-white">Optisoft Technology</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot variant="outlined" color="primary">
-              <MdLaptopMac />
+              <MdLaptopMac color="#fff" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-600">2018 — 2019</h3>
-            <p className="text-sm">Union Bank</p>
+            <h3 className="text-purple-400">2018 — 2019</h3>
+            <p className="text-sm text-white">Union Bank</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot variant="outlined" color="secondary">
-              <MdLaptopMac />
+              <MdLaptopMac color="#fff" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-600">2015 — 2018</h3>
-            <p className="text-sm">PagePedia Technology</p>
+            <h3 className="text-purple-400">2015 — 2018</h3>
+            <p className="text-sm text-white">PagePedia Technology</p>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot variant="outlined" color="primary">
-              <MdLaptopMac />
+              <MdLaptopMac color="#fff" />
             </TimelineDot>
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-600">2014</h3>
-            <p className="text-sm">IMT Computers</p>
+            <h3 className="text-purple-400">2014</h3>
+            <p className="text-sm text-white">IMT Computers</p>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
