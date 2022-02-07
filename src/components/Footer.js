@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { css } from "@emotion/react";
+import CircularProgress from "@mui/material/CircularProgress";
 import Stack from "@mui/material/Stack";
 import {
   FiTwitter,
@@ -10,8 +11,40 @@ import {
   FiGithub,
 } from "react-icons/fi";
 import { Button, FormControl, FormLabel, OutlinedInput } from "@mui/material";
+import axios from "axios";
+
+const initialState = {
+  email: "samwize.inc@gmail.com",
+  subject: "Project Support",
+  message: "",
+};
 
 function Footer() {
+  const [form, setForm] = useState(initialState);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const onChange = ({ target }) => {
+    setForm((prevState) => ({ ...prevState, [target.name]: target.value }));
+  };
+
+  const onSubmit = () => {
+    const request = axios.post("http://localhost:4000/mails", form);
+    setLoading(true);
+    setMessage("sending...");
+    request
+      .then((response) => {
+        console.log(response);
+        setLoading(false);
+        setMessage("sent");
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+    setForm(initialState);
+  };
+
   return (
     <footer className="py-12 border-t border-purple-800 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,6 +191,7 @@ function Footer() {
             <h3 className="text-gray-100 uppercase font-black mb-4">
               Drop a message
             </h3>
+
             <Stack direction="column" spacing="1" alignItems="flex-start">
               <FormControl variant="outlined" fullWidth css={formControl}>
                 <FormLabel sx={{ mb: 1 }}>Message</FormLabel>
@@ -165,12 +199,23 @@ function Footer() {
                   placeholder="Hi, lets have a chat"
                   multiline
                   rows="2"
+                  name="message"
+                  value={form.message}
+                  onChange={onChange}
                 />
               </FormControl>
-
-              <Button variant="outlined" color="primary">
-                Send
-              </Button>
+              <div className="flex items-center space-x-2">
+                <Button
+                  type="submit"
+                  variant="outlined"
+                  color="primary"
+                  onClick={onSubmit}
+                  endIcon={loading && <CircularProgress size={16} />}
+                >
+                  Send
+                </Button>
+                <span className="text-purple-400 text-sm">{message}</span>
+              </div>
             </Stack>
           </div>
         </div>
