@@ -76,6 +76,12 @@ h3.partial-line::before {
   background-image: url(../images/bg-waves.svg);
 }
 
+.counter-bg {
+  background: linear-gradient(90deg, #fff 50%, #eeeeee 50%);
+  background-size: 7%;
+  background-position: center;
+}
+
 .request-bg {
   background-image: url(../images/art.jpg);
   background-repeat: no-repeat;
@@ -191,6 +197,11 @@ h3.partial-line::before {
   .logo::after {
     width: 2vmin;
     height: 2vmin;
+  }
+
+  .counter-bg {
+    background-size: 25%;
+    background: linear-gradient(0, #7e22ce 60%, #311b92 40%);
   }
 
   .swiper-button-next,

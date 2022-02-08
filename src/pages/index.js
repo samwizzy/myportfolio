@@ -4,7 +4,12 @@ import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
 import Stack from "@mui/material/Stack";
 import WorkTimeline from "../components/partials/WorkTimeline";
-import { HiOutlineDocumentText } from "react-icons/hi";
+import {
+  HiOutlineDocumentText,
+  HiOutlineCalendar,
+  HiOutlineBriefcase,
+  HiOutlineBadgeCheck,
+} from "react-icons/hi";
 import CountUp from "react-countup";
 
 const IndexPage = ({ data }) => {
@@ -97,15 +102,46 @@ const IndexPage = ({ data }) => {
         </ul>
       </div>
 
-      <div className="w-full bg-purple-100 shadow-sm mt-4 py-16">
-        <div className="w-full mx-auto text-center">
-          <div className="">
-            <p className="text-7xl font-bold text-purple-800 tracking-widest">
-              <CountUp start={0} end={6} delay={0.5} />
-            </p>
-            <span className="text-xl font-light text-purple-800 tracking-tight">
-              Project Completed
-            </span>
+      <div className="w-full bg-purple-50 counter-bg shadow-sm mt-4 p-16">
+        <div className="bg-white max-w-7xl mx-auto shadow-md rounded-2xl p-16 text-center">
+          <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
+            <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
+              <HiOutlineCalendar size="32" className=" text-gray-600" />
+              <CountUp
+                className="text-7xl font-bold text-gray-600"
+                start={0}
+                end={5}
+                delay={2.5}
+              />
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Companies
+              </span>
+            </div>
+            <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
+              <HiOutlineBadgeCheck size="32" className=" text-gray-600" />
+              <CountUp
+                className="text-7xl font-bold text-gray-600"
+                start={0}
+                end={6}
+                delay={2.5}
+              />
+
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Projects
+              </span>
+            </div>
+            <div className="flex flex-col items-center sm:col-span-4 col-span-12">
+              <HiOutlineBriefcase size="32" className=" text-gray-600" />
+              <CountUp
+                className="text-7xl font-bold text-gray-600"
+                start={0}
+                end={3}
+                delay={2.5}
+              />
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Contracts
+              </span>
+            </div>
           </div>
         </div>
       </div>
