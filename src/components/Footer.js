@@ -176,11 +176,25 @@ function Footer() {
                     </figcaption>
                   </figure>
                 </div>
+
                 <div>
                   <figure>
                     <span className="text-xs">samwize.inc@gmail.com</span>
                     <figcaption className="text-xs text-purple-400 uppercase font-bold">
                       Email
+                    </figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <figure>
+                    <figcaption className="text-xs text-green-400 uppercase font-bold">
+                      <Link
+                        to="https://wa.link/9m2ero"
+                        target="_blank"
+                        className="text-xs"
+                      >
+                        WhatsApp
+                      </Link>
                     </figcaption>
                   </figure>
                 </div>

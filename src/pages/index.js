@@ -40,13 +40,13 @@ const IndexPage = ({ data }) => {
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full text-xl shadow-md bg-secondary-main hover:bg-orange-500 text-white hover:text-white px-6 py-2.5"
+                  className="rounded-full sm:text-xl text-lg shadow-md bg-secondary-main hover:bg-orange-500 text-white hover:text-white px-6 py-2.5"
                   to="/tools"
                 >
                   Tools
                 </Link>
                 <Link
-                  className="rounded-full text-xl shadow-md bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2.5"
+                  className="rounded-full sm:text-xl text-lg shadow-md bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2.5"
                   to="/portfolio"
                 >
                   Portfolio
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
               <div>
                 <h3
                   className={classNames(
-                    "text-gray-600 text-2xl font-bold uppercase mb-3",
+                    "text-gray-600 text-2xl font-normal uppercase mb-3",
                     link.isUnderlined && "partial-line"
                   )}
                 >
@@ -106,40 +106,39 @@ const IndexPage = ({ data }) => {
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
               <HiOutlineCalendar size="32" className=" text-gray-600" />
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Companies
+              </span>
               <CountUp
-                className="text-7xl font-bold text-gray-600"
+                className="text-7xl font-normal text-gray-600"
                 start={0}
                 end={5}
                 delay={2.5}
               />
-              <span className="text-lg font-light text-gray-600 tracking-tight">
-                Companies
-              </span>
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
               <HiOutlineBadgeCheck size="32" className=" text-gray-600" />
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Projects
+              </span>
               <CountUp
-                className="text-7xl font-bold text-gray-600"
+                className="text-7xl font-normal text-gray-600"
                 start={0}
                 end={6}
                 delay={2.5}
               />
-
-              <span className="text-lg font-light text-gray-600 tracking-tight">
-                Projects
-              </span>
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12">
               <HiOutlineBriefcase size="32" className=" text-gray-600" />
+              <span className="text-lg font-light text-gray-600 tracking-tight">
+                Contracts
+              </span>
               <CountUp
-                className="text-7xl font-bold text-gray-600"
+                className="text-7xl font-normal text-gray-600"
                 start={0}
                 end={3}
                 delay={2.5}
               />
-              <span className="text-lg font-light text-gray-600 tracking-tight">
-                Contracts
-              </span>
             </div>
           </div>
         </div>
