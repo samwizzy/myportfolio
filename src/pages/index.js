@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full text-lg shadow-md border border-purple-700 hover:bg-white text-white hover:text-purple-900 px-6 py-2"
+                  className="rounded-full text-lg shadow-md bg-secondary-main hover:bg-secondary-dark text-white hover:text-white px-6 py-2"
                   to="/tools"
                 >
                   Tools
@@ -65,7 +65,7 @@ const IndexPage = ({ data }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ul>
           <li className="sm:mb-16 mb-8">
-            <h2 className="text-purple-600 text-6xl font-black">Biography</h2>
+            <h2 className="text-gray-600 text-6xl font-bold">Biography</h2>
           </li>
           {profile.nodes.map((link) => (
             <li key={link.id} className="py-4">
@@ -102,8 +102,8 @@ const IndexPage = ({ data }) => {
         </ul>
       </div>
 
-      <div className="w-full bg-purple-50 counter-bg shadow-sm mt-4 p-16">
-        <div className="bg-white max-w-7xl mx-auto shadow-md rounded-2xl p-16 text-center">
+      <div className="w-full bg-purple-50 counter-bg shadow-sm mt-4 sm:p-16 px-8 py-16">
+        <div className="bg-white max-w-7xl mx-auto shadow-md rounded-2xl sm:p-16 py-16 text-center">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
               <HiOutlineCalendar size="32" className=" text-gray-600" />
@@ -151,8 +151,10 @@ const IndexPage = ({ data }) => {
           <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
             <div className="sm:col-span-6 col-span-12 flex items-center px-4 sm:px-6 lg:px-8 sm:py-8 py-4 bg-slate-600 bg-timeline relative">
               <div className="w-full justify-between bg-black sm:p-16 p-8 bg-transition">
-                <h2 className="flex items-center space-x-1 text-6xl font-black text-purple-200 mb-4">
-                  <span>Job History</span>
+                <h2 className="flex items-center space-x-1 text-6xl font-bold text-purple-200 mb-4">
+                  <p>
+                    Job <span className="font-light">History</span>
+                  </p>
                   <HiOutlineDocumentText />
                 </h2>
                 <p className="text-base text-gray-200 italic mb-4">
@@ -166,7 +168,7 @@ const IndexPage = ({ data }) => {
                     href={withPrefix("./resume.pdf")}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2"
+                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-sm px-4 py-2"
                   >
                     View CV
                   </a>
@@ -174,7 +176,7 @@ const IndexPage = ({ data }) => {
                     href={withPrefix("./resume.pdf")}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-md px-4 py-2"
+                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-sm px-4 py-2"
                   >
                     Download CV
                   </a>

@@ -114,9 +114,7 @@ h3.partial-line::before {
 
 .bg-transition:hover {
   opacity: 1;
-  background-image: url(../images/art.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(45deg, #000, 50%, #111 50%);
   background-position: center;
 }
 
