@@ -22,32 +22,31 @@ const IndexPage = ({ data }) => {
       <div className="w-full h-96 bg-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
-            <div className="sm:col-span-6 col-span-12 sm:pt-32 pt-8">
-              <h1 className="text-xl font-mono text-purple-200 ml-1">I am</h1>
-              <h1 className="text-7xl font-thin text-purple-200">
+            <div className="sm:col-span-6 col-span-12 sm:pt-24 pt-8">
+              <h1 className="text-xl font-mono text-purple-200 ml-1 -mb-3">
+                I am
+              </h1>
+              <h1 className="sm:text-9xl text-7xl font-thin text-purple-200 mb-8">
                 Samuel <span className="font-black">Okeke</span>
               </h1>
-              <h1 className="sm:text-xl text-lg font-light text-purple-200 ml-1 sm:mb-8 mb-3">
-                — Software Developer
-              </h1>
-              <h3 className="text-sm font-bold text-purple-100">My quote</h3>
-              <p className="text-sm text-gray-200 italic font-mono sm:mb-4 mb-2">
-                Works easy to work smart, apply logic and reapply precedence.
+
+              <p className="sm:text-xl text-sm text-gray-200 font-mono sm:mb-6 mb-6">
+                <strong>My quote:</strong> Works easy to work smart, apply logic
+                and reapply precedence.
               </p>
-              <h3 className="text-sm font-bold text-purple-100">His quote</h3>
-              <p className="text-sm text-gray-200 italic font-mono sm:mb-8 mb-4">
+              <p className="sm:text-xl text-sm text-gray-200 font-mono sm:mb-8 mb-8">
                 Creativity is intelligence having fun. — Albert Einstein
               </p>
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full text-lg shadow-md bg-secondary-main hover:bg-secondary-dark text-white hover:text-white px-6 py-2"
+                  className="rounded-full text-xl shadow-md bg-secondary-main hover:bg-orange-500 text-white hover:text-white px-6 py-2.5"
                   to="/tools"
                 >
                   Tools
                 </Link>
                 <Link
-                  className="rounded-full text-lg shadow-md bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2"
+                  className="rounded-full text-xl shadow-md bg-white hover:bg-purple-600 text-purple-900 hover:text-white px-6 py-2.5"
                   to="/portfolio"
                 >
                   Portfolio
@@ -84,7 +83,7 @@ const IndexPage = ({ data }) => {
                     link.reference.map((ref) => (
                       <span
                         key={ref}
-                        className=" bg-green-700 text-white p-1.5 rounded-md text-xs font-bold"
+                        className=" bg-secondary-dark text-white p-1.5 rounded-md text-xs font-bold"
                       >
                         {ref}
                       </span>

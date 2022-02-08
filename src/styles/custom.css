@@ -77,7 +77,7 @@ h3.partial-line::before {
 }
 
 .counter-bg {
-  background: linear-gradient(90deg, #fff 50%, #eeeeee 50%);
+  background: linear-gradient(45deg, #fff 50%, #eeeeee 50%);
   background-size: 7%;
   background-position: center;
 }
@@ -199,7 +199,7 @@ h3.partial-line::before {
 
   .counter-bg {
     background-size: 25%;
-    background: linear-gradient(0, #7e22ce 60%, #311b92 40%);
+    background: linear-gradient(0, #512da8 60%, #311b92 40%);
   }
 
   .swiper-button-next,
