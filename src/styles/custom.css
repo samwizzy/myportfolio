@@ -23,7 +23,7 @@ h3.partial-line::before {
   justify-content: center;
   width: 3vmin;
   height: 3vmin;
-  border: 2px solid #d8b4fe;
+  border: 2px solid #ff03ff;
   border-radius: 100% 10%;
   pointer-events: none;
 }
@@ -49,7 +49,7 @@ h3.partial-line::before {
   content: "";
   width: 3vmin;
   height: 3vmin;
-  border: 2px solid #c084fc;
+  border: 2px solid #a85bee;
   border-radius: 10% 100%;
   pointer-events: none;
 }
@@ -77,7 +77,7 @@ h3.partial-line::before {
 }
 
 .counter-bg {
-  background: linear-gradient(45deg, #fff 50%, #eeeeee 50%);
+  background: linear-gradient(45deg, #fff 50%, #ff03ff 50%);
   background-size: 7%;
   background-position: center;
 }
@@ -98,18 +98,18 @@ h3.partial-line::before {
 
 .bg-transition {
   opacity: 0.8;
-  transition: all 1s;
+  transition: all 0.5ms;
 }
 
 .bg-transition h2,
 .bg-transition p,
 .bg-transition a {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .bg-transition:hover > h2,
 .bg-transition:hover > p {
-  color: #666;
+  color: #f1f5f9;
 }
 
 .bg-transition:hover {

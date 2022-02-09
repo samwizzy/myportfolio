@@ -5,11 +5,11 @@ import { classNames } from "../utils/helpers";
 import Stack from "@mui/material/Stack";
 import WorkTimeline from "../components/partials/WorkTimeline";
 import {
-  HiOutlineDocumentText,
   HiOutlineCalendar,
   HiOutlineBriefcase,
   HiOutlineBadgeCheck,
 } from "react-icons/hi";
+import { ImFilePdf } from "react-icons/im";
 import CountUp from "react-countup";
 
 const IndexPage = ({ data }) => {
@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
                 I am
               </h1>
               <h1 className="sm:text-9xl text-7xl font-thin text-purple-200 mb-8">
-                Samuel <span className="font-black">Okeke</span>
+                Samuel <span className="font-black text-gray-50">Okeke</span>
               </h1>
 
               <p className="sm:text-xl text-sm text-gray-200 font-mono sm:mb-6 mb-6">
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
 
               <Stack direction="row" spacing="16px" sx={{ marginY: "16px" }}>
                 <Link
-                  className="rounded-full sm:text-xl text-lg shadow-md bg-secondary-main hover:bg-orange-500 text-white hover:text-white px-6 py-2.5"
+                  className="rounded-full sm:text-xl text-lg shadow-md bg-secondary-main hover:bg-secondary-dark text-white hover:text-white px-6 py-2.5"
                   to="/tools"
                 >
                   Tools
@@ -53,8 +53,8 @@ const IndexPage = ({ data }) => {
                 </Link>
               </Stack>
             </div>
-            <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block hidden">
-              <img src="anime.svg" alt="anime" />
+            <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block justify-self-end hidden">
+              <img src="iPhone.svg" alt="anime" className="h-5/6" />
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
                     link.reference.map((ref) => (
                       <span
                         key={ref}
-                        className=" bg-secondary-dark text-white p-1.5 rounded-md text-xs font-bold"
+                        className="bg-secondary-main text-white p-1.5 rounded-md text-xs font-bold"
                       >
                         {ref}
                       </span>
@@ -105,36 +105,36 @@ const IndexPage = ({ data }) => {
         <div className="bg-white max-w-7xl mx-auto shadow-md rounded-2xl sm:p-16 py-16 text-center">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
-              <HiOutlineCalendar size="32" className=" text-gray-600" />
-              <span className="text-lg font-light text-gray-600 tracking-tight">
+              <HiOutlineCalendar size="32" className=" text-gray-400" />
+              <span className="text-base font-normal text-purple-600 tracking-wide">
                 Companies
               </span>
               <CountUp
-                className="text-7xl font-normal text-gray-600"
+                className="text-7xl font-thin text-gray-500"
                 start={0}
                 end={5}
                 delay={2.5}
               />
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
-              <HiOutlineBadgeCheck size="32" className=" text-gray-600" />
-              <span className="text-lg font-light text-gray-600 tracking-tight">
+              <HiOutlineBadgeCheck size="32" className=" text-gray-400" />
+              <span className="text-base font-normal text-purple-600 tracking-wide">
                 Projects
               </span>
               <CountUp
-                className="text-7xl font-normal text-gray-600"
+                className="text-7xl font-thin text-gray-500"
                 start={0}
                 end={6}
                 delay={2.5}
               />
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12">
-              <HiOutlineBriefcase size="32" className=" text-gray-600" />
-              <span className="text-lg font-light text-gray-600 tracking-tight">
+              <HiOutlineBriefcase size="32" className=" text-gray-400" />
+              <span className="text-base font-normal text-purple-600 tracking-wide">
                 Contracts
               </span>
               <CountUp
-                className="text-7xl font-normal text-gray-600"
+                className="text-7xl font-thin text-gray-500"
                 start={0}
                 end={3}
                 delay={2.5}
@@ -153,11 +153,11 @@ const IndexPage = ({ data }) => {
                   <p>
                     Job <span className="font-light">History</span>
                   </p>
-                  <HiOutlineDocumentText />
+                  <ImFilePdf size={24} className="sm:block hidden" />
                 </h2>
-                <p className="text-base text-gray-200 italic mb-4">
-                  Its been quite a journey for me, <br />I can now see where
-                  this road leads.
+                <p className="text-base text-gray-200 mb-4">
+                  Its been quite a journey for me, I can now see where this road
+                  leads.
                   <br />I want you to know how far I have come.
                 </p>
 

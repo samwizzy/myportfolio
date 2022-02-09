@@ -187,7 +187,7 @@ function Footer() {
                 </div>
                 <div>
                   <figure>
-                    <figcaption className="text-xs text-green-400 uppercase font-bold">
+                    <figcaption className="text-xs uppercase font-bold">
                       <Link
                         to="https://wa.link/9m2ero"
                         target="_blank"
