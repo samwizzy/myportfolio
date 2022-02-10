@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
               </Stack>
             </div>
             <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block justify-self-end hidden">
-              <img src="iPhone.svg" alt="anime" className="h-5/6" />
+              <img src="iPhoneX.svg" alt="anime" className=" h-full" />
             </div>
           </div>
         </div>
@@ -64,7 +64,10 @@ const IndexPage = ({ data }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ul>
           <li className="sm:mb-16 mb-8">
-            <h2 className="text-gray-600 text-6xl font-bold">Biography</h2>
+            <span className="text-secondary-dark text-lg">Who am I?</span>
+            <h2 className="text-secondary-dark text-6xl font-bold">
+              Biography
+            </h2>
           </li>
           {profile.nodes.map((link) => (
             <li key={link.id} className="py-4">

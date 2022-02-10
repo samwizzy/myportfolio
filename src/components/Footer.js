@@ -188,13 +188,14 @@ function Footer() {
                 <div>
                   <figure>
                     <figcaption className="text-xs uppercase font-bold">
-                      <Link
-                        to="https://wa.link/9m2ero"
+                      <a
+                        href="https://wa.link/9m2ero"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-xs"
                       >
                         WhatsApp
-                      </Link>
+                      </a>
                     </figcaption>
                   </figure>
                 </div>

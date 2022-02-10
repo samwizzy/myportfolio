@@ -13,7 +13,7 @@ h3.partial-line::before {
   top: 1.5em;
   width: calc(100% - 80px);
   height: 2px;
-  background: none repeat scroll 0 0 #7e22ce;
+  background: none repeat scroll 0 0 #b202b2;
 }
 
 .logo {
@@ -26,6 +26,10 @@ h3.partial-line::before {
   border: 2px solid #ff03ff;
   border-radius: 100% 10%;
   pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
 }
 
 @media (prefers-reduced-motion: no-preference) {
