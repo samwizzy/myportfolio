@@ -29,7 +29,10 @@ function Footer() {
   };
 
   const onSubmit = () => {
-    const request = axios.post("http://localhost:4000/mails", form);
+    const request = axios.post(
+      "https://portfolio-nodemail.herokuapp.com/mails",
+      form
+    );
     setLoading(true);
     setMessage("sending...");
     request
@@ -176,7 +179,6 @@ function Footer() {
                     </figcaption>
                   </figure>
                 </div>
-
                 <div>
                   <figure>
                     <span className="text-xs">samwize.inc@gmail.com</span>
