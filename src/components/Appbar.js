@@ -21,8 +21,8 @@ export default function Appbar() {
 
     function scroller() {
       if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
+        document.body.scrollTop > 64 ||
+        document.documentElement.scrollTop > 64
       ) {
         navRef.current.classList.add("fixed");
       } else {
@@ -32,7 +32,7 @@ export default function Appbar() {
   });
 
   return (
-    <div ref={navRef} className="w-full z-10">
+    <div ref={navRef} className="w-full z-10 transition-all duration-500">
       <Disclosure as="nav" className="bg-white shadow-sm">
         {({ open }) => (
           <>

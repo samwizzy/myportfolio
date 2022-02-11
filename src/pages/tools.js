@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
-import { HiOutlineStar } from "react-icons/hi";
+import { HiOutlineStar, HiOutlineArrowRight } from "react-icons/hi";
 import { Navigation, Pagination, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -90,16 +90,16 @@ function Tools({ data }) {
                   </div>
                 </CardContent>
                 <CardActions>
-                  <div className="px-2 pb-2">
-                    <Button size="small" variant="outlined">
-                      <a
-                        href={tool.website}
-                        target="_blank"
-                        rel="noreferrer"
-                        className=""
-                      >
-                        Learn More
-                      </a>
+                  <div className="px-1 pb-2">
+                    <Button
+                      size="small"
+                      component="a"
+                      href={tool.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      endIcon={<HiOutlineArrowRight />}
+                    >
+                      Learn More
                     </Button>
                   </div>
                 </CardActions>

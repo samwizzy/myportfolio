@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -7,8 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
-import { useState } from "react";
-import { useEffect } from "react";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 function Portfolio({ data }) {
   const [projects, setProjects] = useState([]);
@@ -27,7 +26,7 @@ function Portfolio({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <h1 className="text-3xl font-bold text-gray-600 mb-4">Portfolio</h1>
 
-        <div className="grid grid-cols-12 sm:gap-12 gap-x-0 gap-y-8">
+        <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
           {projects.map((project) => (
             <Card
               key={project.id}
@@ -37,7 +36,7 @@ function Portfolio({ data }) {
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
-              className="card sm:col-span-4 col-span-12"
+              className="card sm:col-span-6 col-span-12"
             >
               <CardMedia
                 component="img"
@@ -45,7 +44,7 @@ function Portfolio({ data }) {
                 sx={{
                   maxWidth: "100%",
                   maxHeight: 400,
-                  objectPosition: "50% 0%",
+                  objectPosition: "50% 0",
                 }}
                 src={
                   project.displayImage
@@ -63,13 +62,13 @@ function Portfolio({ data }) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <div className="px-2 pb-2">
+                <div className="px-1 pb-2">
                   <Button
                     size="small"
                     component="a"
                     href={project.projectUrl}
                     target="_blank"
-                    variant="outlined"
+                    endIcon={<HiOutlineArrowRight />}
                   >
                     Learn More
                   </Button>

@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
-import { HiOutlineClock } from "react-icons/hi";
+import { HiOutlineClock, HiOutlineArrowRight } from "react-icons/hi";
 import slugify from "slugify";
 
 function Articles({ data }) {
@@ -72,12 +72,12 @@ function Articles({ data }) {
                 />
               </CardContent>
               <CardActions>
-                <div className="px-2 pb-2">
+                <div className="px-1 pb-2">
                   <Button
                     size="small"
-                    variant="outlined"
                     component={Link}
                     to={`/articles/${slugify(article.title)}`}
+                    endIcon={<HiOutlineArrowRight />}
                   >
                     Learn More
                   </Button>
