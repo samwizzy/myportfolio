@@ -22,7 +22,7 @@ export default function Appbar() {
     function scroller() {
       if (
         document.body.scrollTop > 64 ||
-        document.documentElement.scrollTop > 64
+        document.documentElement.scrollTop > 264
       ) {
         navRef.current.classList.add("fixed");
       } else {

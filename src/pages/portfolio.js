@@ -24,7 +24,21 @@ function Portfolio({ data }) {
       <title>Portfolio Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-600 mb-4">Portfolio</h1>
+        <div className="sm:text-left text-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-700 mb-2">Portfolio</h1>
+          <p className="text-lg font-light text-gray-600">
+            Just a peek through some of the amazing projects I have worked on.
+            You want to see more? Visit{" "}
+            <a
+              href="https://github.com/samwizzy/"
+              rel="noreferrer"
+              target="_blank"
+              className="text-purple-500 hover:text-purple-600"
+            >
+              GitHub
+            </a>
+          </p>
+        </div>
 
         <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
           {projects.map((project) => (
@@ -57,7 +71,7 @@ function Portfolio({ data }) {
                 <Typography gutterBottom variant="h5" component="div">
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   {project.body}
                 </Typography>
               </CardContent>

@@ -32,9 +32,14 @@ function Tools({ data }) {
       <title>Tools Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-600 mb-4">
-          Most Used Tools
-        </h1>
+        <div className="sm:text-left text-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-700 mb-2">
+            Most Used Tools
+          </h1>
+          <p className="text-lg text-gray-600 font-light">
+            Some of my most used tools and softwares.
+          </p>
+        </div>
 
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -71,11 +76,11 @@ function Tools({ data }) {
                           className="h-8 w-8"
                         />
                       )}
-                      <p className="font-medium text-lg text-gray-600">
+                      <p className="font-medium text-lg text-gray-800">
                         {tool.title}
                       </p>
                     </div>
-                    <Typography variant="body1" color="">
+                    <Typography variant="body1" color="text.secondary">
                       {tool.body}
                     </Typography>
                   </div>

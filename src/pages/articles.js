@@ -20,7 +20,13 @@ function Articles({ data }) {
       <title>Article Page</title>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
-        <h1 className="text-3xl font-bold text-gray-600 mb-4">Articles</h1>
+        <div className="sm:text-left text-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-700 mb-2">Articles</h1>
+          <p className="text-lg text-gray-600 font-light">
+            We talk about everything that bothers around tech and Software
+            Development.
+          </p>
+        </div>
 
         <div className="grid grid-cols-12 sm:gap-x-12 gap-x-0 gap-y-8">
           {articles.map((article) => (
@@ -41,7 +47,7 @@ function Articles({ data }) {
                     gutterBottom
                     variant="h5"
                     component="div"
-                    className="text-gray-600 font-bold"
+                    className="text-gray-800 font-bold"
                   >
                     <Link to={`/articles/${slugify(article.title)}`}>
                       {article.title}

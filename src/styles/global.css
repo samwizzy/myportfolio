@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .active {
-  @apply bg-purple-900 text-white hover:bg-purple-900 !important;
+  @apply bg-purple-700 text-white !important;
 }
 
 @import "./custom.css";
