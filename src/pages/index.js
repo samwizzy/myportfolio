@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
       <div className="w-full h-96 bg-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
-            <div className="sm:col-span-6 col-span-12 sm:pt-24 pt-20">
+            <div className="sm:col-span-6 col-span-12 sm:pt-24 pt-10">
               <h1 className="text-xl font-mono text-purple-200 ml-1 -mb-3">
                 I am
               </h1>
