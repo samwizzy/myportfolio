@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
               <div>
                 <h3
                   className={classNames(
-                    "text-gray-600 text-2xl font-normal uppercase mb-3",
+                    "text-gray-800 text-2xl font-normal uppercase mb-3",
                     link.isUnderlined && "partial-line"
                   )}
                 >
@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
                 Companies
               </span>
               <CountUp
-                className="text-7xl font-thin text-gray-500"
+                className="text-7xl font-light text-gray-600"
                 start={0}
                 end={8}
                 delay={2.5}
@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => {
                 Projects
               </span>
               <CountUp
-                className="text-7xl font-thin text-gray-500"
+                className="text-7xl font-light text-gray-600"
                 start={0}
                 end={10}
                 delay={2.5}
@@ -140,7 +140,7 @@ const IndexPage = ({ data }) => {
                 Contracts
               </span>
               <CountUp
-                className="text-7xl font-thin text-gray-500"
+                className="text-7xl font-light text-gray-600"
                 start={0}
                 end={5}
                 delay={2.5}
@@ -225,13 +225,13 @@ const IndexPage = ({ data }) => {
         </div>
 
         <p className="text-sm font-mono mt-4">
-          Follow me @{" "}
+          Follow me at{" "}
           <code className="text-sm rounded-md p-2 bg-purple-100 text-purple-600">
             @sampedia
           </code>{" "}
-          to know more about me.
+          to learn more{" "}
           <span role="img" aria-label="Sunglasses smiley emoji">
-            😎
+            😎.
           </span>
         </p>
       </div>

@@ -25,18 +25,10 @@ function Portfolio({ data }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <div className="sm:text-left text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-700 mb-2">Portfolio</h1>
-          <p className="text-lg font-light text-gray-600">
+          <span className="text-xs uppercase">Projects</span>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Portfolio</h1>
+          <p className="text-lg text-gray-600">
             Just a peek through some of the amazing projects I have worked on.
-            You want to see more? Visit{" "}
-            <a
-              href="https://github.com/samwizzy/"
-              rel="noreferrer"
-              target="_blank"
-              className="text-purple-500 hover:text-purple-600"
-            >
-              GitHub
-            </a>
           </p>
         </div>
 
@@ -91,6 +83,18 @@ function Portfolio({ data }) {
             </Card>
           ))}
         </div>
+
+        <p className="text-gray-800 mt-6">
+          You want to see more? Visit{" "}
+          <a
+            href="https://github.com/samwizzy/"
+            rel="noreferrer"
+            target="_blank"
+            className="text-purple-500 hover:text-purple-600"
+          >
+            GitHub
+          </a>
+        </p>
       </div>
     </Layout>
   );

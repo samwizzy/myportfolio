@@ -33,10 +33,11 @@ function Tools({ data }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <div className="sm:text-left text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-700 mb-2">
+          <span className="text-xs uppercase">Preferred Tools</span>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
             Most Used Tools
           </h1>
-          <p className="text-lg text-gray-600 font-light">
+          <p className="text-lg text-gray-800">
             Some of my most used tools and softwares.
           </p>
         </div>

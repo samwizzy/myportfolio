@@ -53,12 +53,12 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
-            <div className="flex items-center space-x-2 text-gray-100 uppercase font-black sm:mb-4 mb-2">
+            <div className="flex items-center space-x-2 text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               <div className="logo" />{" "}
               <span className="lg:inline-flex hidden">About Me</span>
             </div>
 
-            <div className="text-gray-300 leading-5">
+            <div className="text-gray-300 leading-6">
               <p className="">
                 The frontend developer with panache. I am big on deep learning.
                 <br />I enjoy training people, and I am an advocate of best
@@ -67,7 +67,7 @@ function Footer() {
             </div>
           </div>
           <div className="sm:col-span-2 col-span-6">
-            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               Links
             </h3>
             <ul className="text-purple-400 leading-6">
@@ -107,7 +107,7 @@ function Footer() {
             </ul>
           </div>
           <div className="sm:col-span-2 col-span-6 sm:block hidden">
-            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               Socials
             </h3>
             <ul className="text-purple-400 leading-6">
@@ -174,7 +174,7 @@ function Footer() {
             </ul>
           </div>
           <div className="sm:col-span-2 col-span-6">
-            <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
+            <h3 className="text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               Contact
             </h3>
             <div className="text-gray-300 leading-6">
@@ -224,7 +224,7 @@ function Footer() {
             </div>
           </div>
           <div className="sm:col-span-3 col-span-12">
-            <h3 className="text-gray-100 uppercase font-black mb-4">
+            <h3 className="text-gray-100 uppercase font-bold mb-4">
               Drop a message
             </h3>
 
@@ -304,10 +304,9 @@ function Footer() {
           </div>
           <div className="text-gray-500">
             <p>
-              Copyright © {new Date().getFullYear()} Snr. Software dev. All
-              rights reserved.
+              Copyright © {new Date().getFullYear()} Snr. Software developer.
             </p>
-            <p>Lagos Island, Nigeria</p>
+            <p>All rights reserved.</p>
           </div>
         </div>
       </div>
