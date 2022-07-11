@@ -31,7 +31,8 @@ const IndexPage = ({ data }) => {
               <p className="sm:text-xl text-lg text-gray-200 sm:mb-8 mb-6">
                 Works easy to work smart, apply logic and reapply precedence.
                 <br />
-                Creativity is intelligence having fun. — Albert Einstein
+                Creativity is intelligence having fun.
+                <br />— Albert Einstein
               </p>
 
               <Stack
@@ -117,7 +118,7 @@ const IndexPage = ({ data }) => {
               <CountUp
                 className="text-7xl font-thin text-gray-500"
                 start={0}
-                end={5}
+                end={8}
                 delay={2.5}
               />
             </div>
@@ -129,7 +130,7 @@ const IndexPage = ({ data }) => {
               <CountUp
                 className="text-7xl font-thin text-gray-500"
                 start={0}
-                end={6}
+                end={10}
                 delay={2.5}
               />
             </div>
@@ -141,7 +142,7 @@ const IndexPage = ({ data }) => {
               <CountUp
                 className="text-7xl font-thin text-gray-500"
                 start={0}
-                end={3}
+                end={5}
                 delay={2.5}
               />
             </div>
@@ -153,14 +154,14 @@ const IndexPage = ({ data }) => {
         <div className="w-full mx-auto">
           <div className="grid grid-cols-12 sm:gap-10 gap-x-0 gap-y-8">
             <div className="sm:col-span-6 col-span-12 flex items-center px-4 sm:px-6 lg:px-8 sm:py-8 py-4 bg-slate-600 bg-timeline relative">
-              <div className="w-full justify-between bg-black sm:p-16 p-8 bg-transition">
+              <div className="w-full justify-between bg-gray-800 sm:p-16 p-8 bg-transition">
                 <h2 className="flex items-center space-x-1 text-6xl font-bold text-purple-200 mb-4">
                   <p>
                     Job <span className="font-light">History</span>
                   </p>
                   <ImFilePdf size={24} className="sm:block hidden" />
                 </h2>
-                <p className="text-base text-gray-200 mb-4">
+                <p className="text-lg text-gray-200 mb-6">
                   Its been quite a journey for me, I can now see where this road
                   leads.
                   <br />I want you to know how far I have come.
@@ -171,7 +172,7 @@ const IndexPage = ({ data }) => {
                     href={withPrefix("./resume.pdf")}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-sm px-4 py-2"
+                    className="border border-purple-500 text-purple-400 hover:text-white uppercase hover:bg-purple-600 rounded-sm px-4 py-2"
                   >
                     View CV
                   </a>
@@ -179,7 +180,7 @@ const IndexPage = ({ data }) => {
                     href={withPrefix("./resume.pdf")}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="border border-purple-600 text-purple-400 hover:text-white hover:bg-purple-600 rounded-sm px-4 py-2"
+                    className="border border-purple-500 text-purple-400 hover:text-white uppercase hover:bg-purple-600 rounded-sm px-4 py-2"
                   >
                     Download CV
                   </a>

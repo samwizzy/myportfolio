@@ -125,7 +125,7 @@ h3.partial-line::before {
 }
 
 .bg-transition {
-  opacity: 0.8;
+  opacity: 0.6;
   transition: all 0.5ms;
 }
 

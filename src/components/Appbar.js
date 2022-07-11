@@ -5,7 +5,7 @@ import { HiOutlineMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { classNames } from "../utils/helpers";
 
 const navigation = [
-  { name: "About Me", href: "/", current: true },
+  { name: "Home", href: "/", current: true },
   { name: "Articles", href: "/articles", current: false },
   { name: "Portfolio", href: "/portfolio", current: false },
   { name: "Tools", href: "/tools", current: false },
@@ -71,7 +71,7 @@ export default function Appbar() {
                           activeClassName="active"
                           className={classNames(
                             "text-purple-600 hover:bg-purple-700 hover:text-white",
-                            "px-3 py-2 rounded-md text-sm font-medium"
+                            "px-3 py-2 rounded-md font-medium text-sm uppercase"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >

@@ -82,6 +82,14 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href="https://linktr.ee/samuelokeke"
+                  className="hover:text-purple-500"
+                >
+                  Linktree
+                </a>
+              </li>
+              <li>
                 <Link to="/articles" className="hover:text-purple-500">
                   Articles
                 </Link>
@@ -151,6 +159,16 @@ function Footer() {
                   rel="noreferrer"
                 >
                   Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/okekesamwize"
+                  className="hover:text-purple-500"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Slack
                 </a>
               </li>
             </ul>
