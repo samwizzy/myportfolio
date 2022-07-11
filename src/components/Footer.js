@@ -49,27 +49,28 @@ function Footer() {
   };
 
   return (
-    <footer className="py-12 border-t border-purple-800 bg-gray-900">
+    <footer className="py-12 border-t-4 border-purple-800 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
             <div className="flex items-center space-x-2 text-gray-100 uppercase font-black sm:mb-4 mb-2">
               <div className="logo" />{" "}
-              <span className="lg:inline-flex hidden"> About Me</span>
+              <span className="lg:inline-flex hidden">About Me</span>
             </div>
-            <div className="text-sm text-gray-300 leading-5">
-              <p className="text-justify">
+
+            <div className="text-gray-300 leading-5">
+              <p className="">
                 The frontend developer with panache. I am big on deep learning.
-                I enjoy training people, and I am an advocate of best practices.
-                If we can do it, we might as well, do it well.
+                <br />I enjoy training people, and I am an advocate of best
+                practices. If we can do it, we might as well, do it well.
               </p>
             </div>
           </div>
-          <div className="sm:col-span-2 col-span-12">
+          <div className="sm:col-span-2 col-span-6">
             <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Links
             </h3>
-            <ul className="text-sm text-purple-400 leading-6">
+            <ul className="text-purple-400 leading-6">
               <li>
                 <Link to="/" className="hover:text-purple-500">
                   Home
@@ -97,11 +98,11 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="sm:col-span-2 col-span-12">
+          <div className="sm:col-span-2 col-span-6 sm:block hidden">
             <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Socials
             </h3>
-            <ul className="text-sm text-purple-400 leading-6">
+            <ul className="text-purple-400 leading-6">
               <li>
                 <a
                   href="https://github.com/samwizzy"
@@ -154,49 +155,49 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="sm:col-span-2 col-span-12">
+          <div className="sm:col-span-2 col-span-6">
             <h3 className="text-gray-100 uppercase font-black sm:mb-4 mb-2">
               Contact
             </h3>
-            <div className="text-sm text-gray-300 leading-6">
+            <div className="text-gray-300 leading-6">
               <Stack
                 direction={{ sm: "column", xs: "column" }}
                 spacing={{ sm: 1 }}
               >
                 <div>
                   <figure>
-                    <span className="text-xs">07068962708</span>
-                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
+                    <span className="text-sm">07068962708</span>
+                    <figcaption className="text-sm text-purple-400 uppercase font-bold">
                       Mobile
                     </figcaption>
                   </figure>
                 </div>
                 <div>
                   <figure>
-                    <span className="text-xs">09071142337</span>
-                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
+                    <span className="text-sm">09071142337</span>
+                    <figcaption className="text-sm text-purple-400 uppercase font-bold">
                       Contact
                     </figcaption>
                   </figure>
                 </div>
                 <div>
                   <figure>
-                    <span className="text-xs">samwize.inc@gmail.com</span>
-                    <figcaption className="text-xs text-purple-400 uppercase font-bold">
+                    <span className="text-sm">samwize.inc@gmail.com</span>
+                    <figcaption className="text-sm text-purple-400 uppercase font-bold">
                       Email
                     </figcaption>
                   </figure>
                 </div>
                 <div>
                   <figure>
-                    <figcaption className="text-xs uppercase font-bold">
+                    <figcaption className="text-sm uppercase font-bold">
                       <a
                         href="https://wa.link/9m2ero"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xs"
+                        className="text-sm"
                       >
-                        WhatsApp
+                        WhatsApp me
                       </a>
                     </figcaption>
                   </figure>
@@ -284,7 +285,10 @@ function Footer() {
             </h1>
           </div>
           <div className="text-gray-500">
-            <p>Copyright © 2021 Snr. Software dev. All rights reserved.</p>
+            <p>
+              Copyright © {new Date().getFullYear()} Snr. Software dev. All
+              rights reserved.
+            </p>
             <p>Lagos Island, Nigeria</p>
           </div>
         </div>
@@ -296,7 +300,6 @@ function Footer() {
 const formControl = css`
   margin-bottom: 0.5rem;
   & .MuiFormLabel-root {
-    font-size: 0.875rem;
     line-height: 1.25rem;
     color: #c084fc;
   }
@@ -308,7 +311,6 @@ const formControl = css`
   }
   & .MuiOutlinedInput-input {
     ::placeholder {
-      font-size: 0.875rem;
       line-height: 1.25rem;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

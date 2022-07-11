@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useRef } from "react";
 import { Link } from "gatsby";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { HiOutlineBell, HiOutlineMenuAlt1, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenuAlt1, HiOutlineX } from "react-icons/hi";
 import { classNames } from "../utils/helpers";
 
 const navigation = [
@@ -32,7 +32,10 @@ export default function Appbar() {
   });
 
   return (
-    <div ref={navRef} className="w-full z-10 transition-all duration-500">
+    <div
+      ref={navRef}
+      className="w-full z-10 transition duration-500 ease-in-out delay-150"
+    >
       <Disclosure as="nav" className="bg-white shadow-sm">
         {({ open }) => (
           <>
@@ -79,14 +82,6 @@ export default function Appbar() {
                   </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <button
-                    type="button"
-                    className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <HiOutlineBell className="h-6 w-6" aria-hidden="true" />
-                  </button>
-
                   {/* Profile dropdown */}
                   <Menu as="div" className="ml-3 relative">
                     <div>

@@ -12,7 +12,7 @@ import {
 import { ImFilePdf } from "react-icons/im";
 import CountUp from "react-countup";
 
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   const { profile } = data;
 
   return (
@@ -239,7 +239,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query SiteData {
+  query AboutSiteData {
     site {
       siteMetadata {
         title
@@ -263,4 +263,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default AboutPage;
