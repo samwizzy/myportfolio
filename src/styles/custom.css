@@ -52,6 +52,31 @@ h3.partial-line::before {
   pointer-events: none;
 }
 
+.linethrough {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+
+.linethrough::before,
+.linethrough::after {
+  position: absolute;
+  right: 100%;
+  top: 7px;
+  width: 32px;
+  height: 2px;
+  border-bottom: 1.2px solid #b202b2;
+}
+
+.linethrough::before {
+  right: 100%;
+  transform: translateX(-8px);
+}
+.linethrough::after {
+  left: 100%;
+  transform: translateX(8px);
+}
+
 .fixed {
   position: fixed;
 }
@@ -223,6 +248,11 @@ h3.partial-line::before {
   .logo::after {
     width: 2vmin;
     height: 2vmin;
+  }
+
+  .linethrough::before,
+  .linethrough::after {
+    content: "";
   }
 
   .counter-bg {

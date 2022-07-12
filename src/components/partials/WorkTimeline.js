@@ -19,7 +19,7 @@ function WorkTimelIne() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-400">2021 — 2022</h3>
+            <h3 className="text-purple-400">2022 — Present</h3>
             <p className="text-sm text-white">Kaiglo NG</p>
           </TimelineContent>
         </TimelineItem>

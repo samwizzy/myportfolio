@@ -5,7 +5,6 @@ module.exports = {
     author: "@samwize.inc",
   },
   plugins: [
-    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -30,9 +29,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -41,6 +37,8 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -49,6 +47,17 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./src/blog/",
+        ignore: [`**/\.*`],
+      },
+      __key: "blog",
+    },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {

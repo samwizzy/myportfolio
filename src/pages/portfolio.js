@@ -25,9 +25,9 @@ function Portfolio({ data }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <div className="sm:text-left text-center mb-8">
-          <span className="text-xs uppercase">Projects</span>
+          <span className="text-xs uppercase linethrough">Projects</span>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Portfolio</h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-800">
             Just a peek through some of the amazing projects I have worked on.
           </p>
         </div>

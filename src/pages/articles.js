@@ -21,7 +21,7 @@ function Articles({ data }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <div className="sm:text-left text-center mb-8">
-          <span className="text-xs uppercase mb-2">Tech talk</span>
+          <span className="text-xs uppercase mb-2 linethrough">Tech talk</span>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Articles</h1>
           <p className="text-lg text-gray-800">
             We talk about everything that bothers around technology.
