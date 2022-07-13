@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
 import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import { HiOutlineClock, HiOutlineArrowRight } from "react-icons/hi";
@@ -43,16 +42,13 @@ function Articles({ data }) {
               />
               <CardContent>
                 <div className="mb-3">
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    className="text-gray-800 font-bold"
+                  <Link
+                    className="text-2xl font-bold text-gray-800"
+                    to={`/articles/${slugify(article.title)}`}
                   >
-                    <Link to={`/articles/${slugify(article.title)}`}>
-                      {article.title}
-                    </Link>
-                  </Typography>
+                    {article.title}
+                  </Link>
+                  <div className="mb-2" />
 
                   <Stack direction="row" spacing={2} alignItems="center">
                     <div className="flex items-center text-sm text-gray-800">
@@ -61,13 +57,13 @@ function Articles({ data }) {
                         alt="Samuel Okeke"
                         src="https://ik.imagekit.io/3ugevgshj2i/samjpg_M6cSaT7Vjxu.jpg?updatedAt=1641379507144"
                       />
-                      <span className="text-sm text-gray-800">
-                        Samuel Okeke
+                      <span className="text-sm text-gray-600 capitalize">
+                        samuel okeke
                       </span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-800">
+                    <div className="flex items-center text-sm text-gray-600">
                       <HiOutlineClock />
-                      <span className="text-sm">21 Jan 2022 09:30</span>
+                      <span className="text-sm">21 Jan, 2022 09:30</span>
                     </div>
                   </Stack>
                 </div>

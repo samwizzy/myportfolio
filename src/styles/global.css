@@ -6,4 +6,8 @@
   @apply bg-purple-700 text-white !important;
 }
 
+a {
+  @apply text-purple-600;
+}
+
 @import "./custom.css";

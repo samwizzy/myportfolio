@@ -54,11 +54,9 @@ function Footer() {
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
             <div className="flex items-center space-x-2 text-gray-100 uppercase font-bold sm:mb-4 mb-2">
-              <div className="logo" />{" "}
-              <span className="lg:inline-flex hidden">About Me</span>
+              <span className="lg:inline-flex hidden">Résumé</span>
             </div>
-
-            <div className="text-gray-300 leading-6">
+            <div className="text-gray-200 leading-6">
               <p className="">
                 The frontend developer with panache. I am big on deep learning.
                 <br />I enjoy training people, and I am an advocate of best
@@ -70,37 +68,49 @@ function Footer() {
             <h3 className="text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               Links
             </h3>
-            <ul className="text-purple-400 leading-6">
+            <ul className="leading-6">
               <li>
-                <Link to="/" className="hover:text-purple-500">
+                <Link to="/" className="text-purple-400 hover:text-purple-500">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="hover:text-purple-500">
+                <Link
+                  to="/portfolio"
+                  className="text-purple-400 hover:text-purple-500"
+                >
                   Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/articles"
+                  className="text-purple-400 hover:text-purple-500"
+                >
+                  Articles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tools"
+                  className="text-purple-400 hover:text-purple-500"
+                >
+                  Tools
                 </Link>
               </li>
               <li>
                 <a
                   href="https://linktr.ee/samuelokeke"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                 >
                   Linktree
                 </a>
               </li>
               <li>
-                <Link to="/articles" className="hover:text-purple-500">
-                  Articles
-                </Link>
-              </li>
-              <li>
-                <Link to="/tools" className="hover:text-purple-500">
-                  Tools
-                </Link>
-              </li>
-              <li>
-                <Link to="/request" className="hover:text-purple-500">
+                <Link
+                  to="/request"
+                  className="text-purple-400 hover:text-purple-500"
+                >
                   Drop a request
                 </Link>
               </li>
@@ -114,7 +124,7 @@ function Footer() {
               <li>
                 <a
                   href="https://github.com/samwizzy"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -125,7 +135,7 @@ function Footer() {
               <li>
                 <a
                   href="https://linkedin.com/in/samuel-okeke"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -135,7 +145,7 @@ function Footer() {
               <li>
                 <a
                   href="https://instagram.com/samwize.o/"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   rel="noreferrer"
                 >
                   Instagram
@@ -144,7 +154,7 @@ function Footer() {
               <li>
                 <a
                   href="https://twitter.com/sampedia"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -154,7 +164,7 @@ function Footer() {
               <li>
                 <a
                   href="https://facebook.com/okekesamwize"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -164,7 +174,7 @@ function Footer() {
               <li>
                 <a
                   href="https://facebook.com/okekesamwize"
-                  className="hover:text-purple-500"
+                  className="text-purple-400 hover:text-purple-500"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -177,7 +187,7 @@ function Footer() {
             <h3 className="text-gray-100 uppercase font-bold sm:mb-4 mb-2">
               Contact
             </h3>
-            <div className="text-gray-300 leading-6">
+            <div className="text-gray-200 leading-6">
               <Stack
                 direction={{ sm: "column", xs: "column" }}
                 spacing={{ sm: 1 }}
@@ -213,7 +223,7 @@ function Footer() {
                         href="https://wa.link/9m2ero"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm"
+                        className="text-green-300"
                       >
                         WhatsApp me
                       </a>
@@ -258,7 +268,7 @@ function Footer() {
 
         <hr className="h-1 border-t border-gray-800 my-8" />
 
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-4">
           <a
             href="https://facebook.com/okekesamwize"
             target="_blank"
@@ -297,8 +307,9 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center text-center">
+          <div className="logo mb-2" />
           <div>
-            <h1 className="text-3xl font-black text-gray-400">
+            <h1 className="text-3xl font-black text-gray-300">
               SAMUEL C. OKEKE
             </h1>
           </div>
