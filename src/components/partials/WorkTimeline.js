@@ -31,7 +31,7 @@ function WorkTimelIne() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            <h3 className="text-purple-400">2021</h3>
+            <h3 className="text-purple-400">2021 — 2022</h3>
             <p className="text-sm text-white">Intelligent Innovations</p>
           </TimelineContent>
         </TimelineItem>

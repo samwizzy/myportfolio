@@ -54,7 +54,7 @@ function Footer() {
         <div className="grid grid-cols-12 sm:gap-x-10 gap-x-0 gap-y-4">
           <div className="sm:col-span-3 col-span-12">
             <div className="flex items-center space-x-2 text-gray-100 uppercase font-bold sm:mb-4 mb-2">
-              <span className="lg:inline-flex hidden">Résumé</span>
+              <span className="lg:inline-flex">Résumé</span>
             </div>
             <div className="text-gray-200 leading-6">
               <p className="">
