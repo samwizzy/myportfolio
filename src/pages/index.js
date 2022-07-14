@@ -54,8 +54,12 @@ const IndexPage = ({ data }) => {
                 </Link>
               </Stack>
             </div>
-            <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block justify-self-end hidden">
-              <img src="iPhonePro.svg" alt="anime" className=" h-full" />
+            <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block mx-auto hidden">
+              <img
+                src="iPhonePro.svg"
+                alt="anime"
+                className="h-5/6 shadow-md"
+              />
             </div>
           </div>
         </div>
@@ -162,9 +166,8 @@ const IndexPage = ({ data }) => {
                   <ImFilePdf size={24} className="sm:block hidden" />
                 </h2>
                 <p className="text-lg text-gray-200 mb-6">
-                  Its been quite a journey for me, I can now see where this road
-                  leads.
-                  <br />I want you to know how far I have come.
+                  It has been quite a journey for me, I can now see where this
+                  road leads. I want you to know how far I have come.
                 </p>
 
                 <div className="sm:space-x-3 space-x-2 space-y-2">
