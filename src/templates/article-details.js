@@ -16,13 +16,13 @@ function ArticleDetails({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <div className="grid grid-cols-12 sm:gap-x-8 gap-x-0 gap-y-8">
           <div className="sm:col-span-8 col-span-12">
-            <div className="flex items-start mb-6">
+            <div className="flex sm:flex-row flex-col items-start mb-6">
               <div className="flex items-center justify-center w-fit border border-purple-800 rounded-full p-2">
                 <Link to="/articles">
                   <HiOutlineArrowLeft size="32" color="#7e22ce" />
                 </Link>
               </div>
-              <div className="ml-4">
+              <div className="sm:ml-4">
                 <h1 className="text-3xl font-bold text-gray-800 mb-2">
                   {title}
                 </h1>
