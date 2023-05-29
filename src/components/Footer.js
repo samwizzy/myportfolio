@@ -44,6 +44,7 @@ function Footer() {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        setMessage("");
       });
     setForm(initialState);
   };
