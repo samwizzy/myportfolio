@@ -22,18 +22,12 @@ function Articles({ data }) {
         <div className="sm:text-left text-center mb-8">
           <span className="text-xs uppercase mb-2 linethrough">Tech talk</span>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Articles</h1>
-          <p className="text-lg text-gray-800">
-            We talk about everything that bothers around technology.
-          </p>
+          <p className="text-lg text-gray-800">We talk about everything that bothers around technology.</p>
         </div>
 
         <div className="grid grid-cols-12 sm:gap-x-12 gap-x-0 gap-y-8">
           {articles.map((article) => (
-            <Card
-              key={article.id}
-              sx={{ maxWidth: "100%" }}
-              className="sm:col-span-6 col-span-12"
-            >
+            <Card key={article.id} sx={{ maxWidth: "100%" }} className="sm:col-span-6 col-span-12">
               <CardMedia
                 component="img"
                 height="140"
@@ -42,10 +36,7 @@ function Articles({ data }) {
               />
               <CardContent>
                 <div className="mb-3">
-                  <Link
-                    className="text-2xl font-bold text-gray-800"
-                    to={`/articles/${slugify(article.title)}`}
-                  >
+                  <Link className="text-2xl font-bold text-gray-800" to={`/articles/${slugify(article.title)}`}>
                     {article.title}
                   </Link>
                   <div className="mb-2" />
@@ -57,9 +48,7 @@ function Articles({ data }) {
                         alt="Samuel Okeke"
                         src="https://ik.imagekit.io/3ugevgshj2i/samjpg_M6cSaT7Vjxu.jpg?updatedAt=1641379507144"
                       />
-                      <span className="text-sm text-gray-600 capitalize">
-                        samuel okeke
-                      </span>
+                      <span className="text-sm text-gray-600 capitalize">samuel okeke</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
                       <HiOutlineClock />
@@ -91,6 +80,10 @@ function Articles({ data }) {
       </div>
     </Layout>
   );
+}
+
+export function Head() {
+  return <title>Articles</title>;
 }
 
 export const data = graphql`

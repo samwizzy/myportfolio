@@ -27,9 +27,7 @@ function Portfolio({ data }) {
         <div className="sm:text-left text-center mb-8">
           <span className="text-xs uppercase linethrough">Projects</span>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Portfolio</h1>
-          <p className="text-lg text-gray-800">
-            Just a peek through some of the amazing projects I have worked on.
-          </p>
+          <p className="text-lg text-gray-800">Just a peek through some of the amazing projects I have worked on.</p>
         </div>
 
         <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
@@ -98,6 +96,10 @@ function Portfolio({ data }) {
       </div>
     </Layout>
   );
+}
+
+export function Head() {
+  return <title>Portfolio</title>;
 }
 
 export const data = graphql`

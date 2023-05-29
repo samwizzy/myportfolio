@@ -1,14 +1,10 @@
-import { graphql, Link, withPrefix } from "gatsby";
 import * as React from "react";
+import { graphql, Link, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import { classNames } from "../utils/helpers";
 import Stack from "@mui/material/Stack";
 import WorkTimeline from "../components/partials/WorkTimeline";
-import {
-  HiOutlineCalendar,
-  HiOutlineBriefcase,
-  HiOutlineBadgeCheck,
-} from "react-icons/hi";
+import { HiOutlineCalendar, HiOutlineBriefcase, HiOutlineBadgeCheck } from "react-icons/hi";
 import { ImFilePdf } from "react-icons/im";
 import CountUp from "react-countup";
 
@@ -35,11 +31,7 @@ const IndexPage = ({ data }) => {
                 <br />— Albert Einstein
               </p>
 
-              <Stack
-                direction="row"
-                spacing="16px"
-                justifyContent={{ sm: "flex-start", xs: "center" }}
-              >
+              <Stack direction="row" spacing="16px" justifyContent={{ sm: "flex-start", xs: "center" }}>
                 <Link
                   className="rounded-full sm:text-xl text-lg shadow-md bg-secondary-main hover:bg-secondary-dark text-white hover:text-white px-6 py-2.5"
                   to="/tools"
@@ -55,11 +47,7 @@ const IndexPage = ({ data }) => {
               </Stack>
             </div>
             <div className="sm:col-span-6 col-span-12 sm:pt-16 sm:block mx-auto hidden">
-              <img
-                src="iPhonePro.svg"
-                alt="anime"
-                className="h-5/6 shadow-md"
-              />
+              <img src="iPhonePro.svg" alt="anime" className="h-5/6 shadow-md" />
             </div>
           </div>
         </div>
@@ -69,12 +57,8 @@ const IndexPage = ({ data }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <ul>
           <li className="sm:mb-16 mb-8">
-            <span className="text-primary-dark text-sm uppercase">
-              Who am I?
-            </span>
-            <h2 className="text-secondary-dark text-6xl font-bold">
-              Biography
-            </h2>
+            <span className="text-primary-dark text-sm uppercase">Who am I?</span>
+            <h2 className="text-secondary-dark text-6xl font-bold">Biography</h2>
           </li>
           {profile.nodes.map((link) => (
             <li key={link.id} className="py-4">
@@ -91,10 +75,7 @@ const IndexPage = ({ data }) => {
                 <p className="text-gray-400 font-medium space-x-2">
                   {link.reference &&
                     link.reference.map((ref) => (
-                      <span
-                        key={ref}
-                        className="bg-primary-dark text-white p-1.5 rounded-md text-xs font-bold"
-                      >
+                      <span key={ref} className="bg-primary-dark text-white p-1.5 rounded-md text-xs font-bold">
                         {ref}
                       </span>
                     ))}
@@ -116,39 +97,18 @@ const IndexPage = ({ data }) => {
           <div className="grid grid-cols-12 sm:gap-8 gap-x-0 gap-y-8">
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
               <HiOutlineCalendar size="48" className=" text-purple-600" />
-              <span className="text-lg font-normal text-purple-600 tracking-wide">
-                Companies
-              </span>
-              <CountUp
-                className="text-7xl font-light text-gray-600"
-                start={0}
-                end={8}
-                delay={2.5}
-              />
+              <span className="text-lg font-normal text-purple-600 tracking-wide">Companies</span>
+              <CountUp className="text-7xl font-light text-gray-600" start={0} end={8} delay={2.5} />
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12 sm:border-r sm:border-gray-200">
               <HiOutlineBadgeCheck size="48" className="text-purple-600" />
-              <span className="text-lg font-normal text-purple-600 tracking-wide">
-                Projects
-              </span>
-              <CountUp
-                className="text-7xl font-light text-gray-600"
-                start={0}
-                end={10}
-                delay={2.5}
-              />
+              <span className="text-lg font-normal text-purple-600 tracking-wide">Projects</span>
+              <CountUp className="text-7xl font-light text-gray-600" start={0} end={10} delay={2.5} />
             </div>
             <div className="flex flex-col items-center sm:col-span-4 col-span-12">
               <HiOutlineBriefcase size="48" className="text-purple-600" />
-              <span className="text-lg font-normal text-purple-600 tracking-wide">
-                Contracts
-              </span>
-              <CountUp
-                className="text-7xl font-light text-gray-600"
-                start={0}
-                end={5}
-                delay={2.5}
-              />
+              <span className="text-lg font-normal text-purple-600 tracking-wide">Contracts</span>
+              <CountUp className="text-7xl font-light text-gray-600" start={0} end={5} delay={2.5} />
             </div>
           </div>
         </div>
@@ -166,8 +126,8 @@ const IndexPage = ({ data }) => {
                   <ImFilePdf size={24} className="sm:block hidden" />
                 </h2>
                 <p className="text-lg text-gray-200 mb-6">
-                  It has been quite a journey for me, I can now see where this
-                  road leads. I want you to know how far I have come.
+                  It has been quite a journey for me, I can now see where this road leads. I want you to know how far I
+                  have come.
                 </p>
 
                 <div className="sm:space-x-3 space-x-2 space-y-2">
@@ -220,19 +180,12 @@ const IndexPage = ({ data }) => {
             alt="Tailwind CSS"
             src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
           />
-          <img
-            className="ml-2 inline-block h-6 icon"
-            alt="Contentful"
-            src="/contentful.svg"
-          />
+          <img className="ml-2 inline-block h-6 icon" alt="Contentful" src="/contentful.svg" />
         </div>
 
         <p className="text-sm font-mono mt-4">
-          Follow me at{" "}
-          <code className="text-sm rounded-md p-2 bg-purple-100 text-purple-600">
-            @sampedia
-          </code>{" "}
-          to learn more{" "}
+          Follow me at <code className="text-sm rounded-md p-2 bg-purple-100 text-purple-600">@sampedia</code> to learn
+          more{" "}
           <span role="img" aria-label="Sunglasses smiley emoji">
             😎.
           </span>
@@ -242,6 +195,10 @@ const IndexPage = ({ data }) => {
   );
 };
 
+export function Head() {
+  return <title>Snr. Frontend</title>;
+}
+
 export const query = graphql`
   query SiteData {
     site {
@@ -250,7 +207,7 @@ export const query = graphql`
         siteUrl
       }
     }
-    profile: allContentfulProfile(sort: { fields: createdAt }) {
+    profile: allContentfulProfile(sort: { createdAt: ASC }) {
       nodes {
         id
         isUnderlined

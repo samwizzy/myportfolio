@@ -17,13 +17,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [
-      "system-ui",
-      "Quicksand",
-      "Roboto",
-      "Montserrat",
-      "sans-serif",
-    ].join(","),
+    fontFamily: ["system-ui", "Quicksand", "Roboto", "Montserrat", "sans-serif"].join(","),
   },
   shadows: [
     "none",

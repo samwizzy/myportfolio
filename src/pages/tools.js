@@ -34,12 +34,8 @@ function Tools({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-16 py-8">
         <div className="sm:text-left text-center mb-8">
           <span className="text-xs uppercase linethrough">Preferred Tools</span>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">
-            Most Used Tools
-          </h1>
-          <p className="text-lg text-gray-800">
-            Some of my most used tools and softwares.
-          </p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Most Used Tools</h1>
+          <p className="text-lg text-gray-800">Some of my most used tools and softwares.</p>
         </div>
 
         <Swiper
@@ -70,16 +66,8 @@ function Tools({ data }) {
                 <CardContent>
                   <div>
                     <div className="flex items-center space-x-1 mb-4">
-                      {tool.image && (
-                        <img
-                          src={tool.image?.file?.url}
-                          alt="tool"
-                          className="h-8 w-8"
-                        />
-                      )}
-                      <p className="font-medium text-lg text-gray-800">
-                        {tool.title}
-                      </p>
+                      {tool.image && <img src={tool.image?.file?.url} alt="tool" className="h-8 w-8" />}
+                      <p className="font-medium text-lg text-gray-800">{tool.title}</p>
                     </div>
                     <Typography variant="body1" color="text.secondary">
                       {tool.body}
@@ -87,9 +75,7 @@ function Tools({ data }) {
                   </div>
 
                   <div className="flex w-fit border border-purple-200 rounded-md mt-4 overflow-hidden shadow-sm">
-                    <span className="border-r border-purple-200 flex-1 px-2 py-0.5">
-                      {tool.star}
-                    </span>
+                    <span className="border-r border-purple-200 flex-1 px-2 py-0.5">{tool.star}</span>
                     <span className="flex items-center space-x-1 flex-1 px-2 py-0.5 bg-purple-500 text-white">
                       <span>star</span> <HiOutlineStar />
                     </span>
@@ -116,6 +102,10 @@ function Tools({ data }) {
       </div>
     </Layout>
   );
+}
+
+export function Head() {
+  return <title>Most used tools</title>;
 }
 
 export const data = graphql`
