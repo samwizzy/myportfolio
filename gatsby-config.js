@@ -138,24 +138,24 @@ module.exports = {
       __key: "pdfs",
     },
     `gatsby-transformer-pdf`,
-    {
-      resolve: `gatsby-theme-material-ui`,
-      options: {
-        webFontsConfig: {
-          fonts: {
-            google: [
-              {
-                family: `Quicksand`,
-                variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-              },
-              {
-                family: `Roboto`,
-                variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
-              },
-            ],
-          },
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-theme-material-ui`,
+    //   options: {
+    //     webFontsConfig: {
+    //       fonts: {
+    //         google: [
+    //           {
+    //             family: `Quicksand`,
+    //             variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+    //           },
+    //           {
+    //             family: `Roboto`,
+    //             variants: [`300`, `400`, `500`, `600`, `700`, `800`, `900`],
+    //           },
+    //         ],
+    //       },
+    //     },
+    //   },
+    // },
   ],
 };

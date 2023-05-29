@@ -8,14 +8,11 @@ function RequestPage() {
         <div className="sm:col-span-7 col-span-12 bg-white request-bg">
           <div className="flex items-center justify-center h-screen sm:p-32 p-8">
             <div className="">
-              <h2 className="text-6xl text-gray-600 font-black sm:mb-12 mb-8">
-                Make a request in a few minute
-              </h2>
+              <h2 className="text-6xl text-gray-600 font-black sm:mb-12 mb-8">Make a request in a few minute</h2>
 
               <p className="text-2xl text-gray-700 font-light tracking-wide sm:mb-8 mb-4">
-                We will like to assist you in building your project, we are
-                always quick to respond to your request anytime, any day and
-                from anywhere
+                We will like to assist you in building your project, we are always quick to respond to your request
+                anytime, any day and from anywhere
               </p>
 
               <Link
@@ -45,6 +42,10 @@ function RequestPage() {
       </div>
     </div>
   );
+}
+
+export function Head() {
+  return <title>Request a quote</title>;
 }
 
 export default RequestPage;

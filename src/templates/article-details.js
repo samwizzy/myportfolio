@@ -23,9 +23,7 @@ function ArticleDetails({ data }) {
                 </Link>
               </div>
               <div className="sm:ml-4">
-                <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                  {title}
-                </h1>
+                <h1 className="text-3xl font-bold text-gray-800 mb-2">{title}</h1>
                 <Stack direction="row" spacing={2} alignItems="center">
                   <div className="flex items-center text-sm text-gray-800">
                     <Avatar
@@ -33,9 +31,7 @@ function ArticleDetails({ data }) {
                       alt="Samuel Okeke"
                       src="https://ik.imagekit.io/3ugevgshj2i/samjpg_M6cSaT7Vjxu.jpg?updatedAt=1641379507144"
                     />
-                    <span className="text-sm text-gray-600 capitalize">
-                      Samuel Okeke
-                    </span>
+                    <span className="text-sm text-gray-600 capitalize">Samuel Okeke</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <HiOutlineClock />
@@ -54,9 +50,7 @@ function ArticleDetails({ data }) {
           </div>
           <div className="sm:col-span-4 col-span-12">
             <div className="mb-8">
-              <h1 className="text-xl font-bold text-gray-800 mb-3">
-                Favorite Articles
-              </h1>
+              <h1 className="text-xl font-bold text-gray-800 mb-3">Favorite Articles</h1>
 
               <div>
                 <p className="text-gray-600">No featured article</p>
@@ -64,9 +58,7 @@ function ArticleDetails({ data }) {
             </div>
 
             <div className="">
-              <h1 className="text-xl font-bold text-gray-800 mb-3">
-                Article tags
-              </h1>
+              <h1 className="text-xl font-bold text-gray-800 mb-3">Article tags</h1>
 
               <div className="flex gap-2 items-center flex-wrap">
                 <Chip label="react" color="primary" />
