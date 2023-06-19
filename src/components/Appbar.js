@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { Fragment, useRef } from "react";
 import { Link } from "gatsby";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiOutlineMenuAlt1, HiOutlineX } from "react-icons/hi";
@@ -14,28 +14,8 @@ const navigation = [
 export default function Appbar() {
   const navRef = useRef(null);
 
-  useEffect(() => {
-    window.onscroll = function () {
-      scroller();
-    };
-
-    function scroller() {
-      if (
-        document.body.scrollTop > 64 ||
-        document.documentElement.scrollTop > 264
-      ) {
-        navRef.current.classList.add("fixed");
-      } else {
-        navRef.current.classList.remove("fixed");
-      }
-    }
-  });
-
   return (
-    <div
-      ref={navRef}
-      className="w-full z-10 transition duration-500 ease-in-out delay-150"
-    >
+    <div ref={navRef} className="w-full sticky top-0 z-10 transition duration-500 ease-in-out delay-150">
       <Disclosure as="nav" className="bg-white shadow-sm">
         {({ open }) => (
           <>
@@ -46,15 +26,9 @@ export default function Appbar() {
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-purple-600 hover:text-white hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <HiOutlineX
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <HiOutlineX className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <HiOutlineMenuAlt1
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <HiOutlineMenuAlt1 className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -109,10 +83,7 @@ export default function Appbar() {
                           {({ active }) => (
                             <a
                               href="/"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
+                              className={classNames({ "bg-gray-100": active }, "block px-4 py-2 text-sm text-gray-700")}
                             >
                               Your Profile
                             </a>
@@ -122,10 +93,7 @@ export default function Appbar() {
                           {({ active }) => (
                             <a
                               href="/"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
+                              className={classNames({ "bg-gray-100": active }, "block px-4 py-2 text-sm text-gray-700")}
                             >
                               Settings
                             </a>
@@ -135,10 +103,7 @@ export default function Appbar() {
                           {({ active }) => (
                             <a
                               href="/"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
+                              className={classNames({ "bg-gray-100": active }, "block px-4 py-2 text-sm text-gray-700")}
                             >
                               Sign out
                             </a>
